@@ -5,9 +5,41 @@
     <option name="PATTERN_ANNOTATION" value="org.intellij.lang.annotations.Pattern" />
     <option name="SUBST_ANNOTATION" value="org.intellij.lang.annotations.Subst" />
     <option name="RESOLVE_REFERENCES" value="true" />
+    <injection language="AngularJS" injector-id="xml">
+      <display-name>div/@ng-repeat</display-name>
+      <place><![CDATA[xmlAttribute().withLocalName(string().equalTo("ng-repeat")).withParent(xmlTag().withLocalName(string().equalTo("div")).withNamespace(string().equalTo("http://www.w3.org/1999/html")))]]></place>
+    </injection>
     <injection language="Apple JS" injector-id="xml">
       <display-name>img/@src</display-name>
       <place><![CDATA[xmlAttribute().withLocalName(string().equalTo("src")).withParent(xmlTag().withLocalName(string().equalTo("img")).withNamespace(string().equalTo("http://www.w3.org/1999/html")))]]></place>
+    </injection>
+    <injection language="AngularJS" injector-id="xml">
+      <display-name>md-checkbox/@md-indeterminate</display-name>
+      <place><![CDATA[xmlAttribute().withLocalName(string().equalTo("md-indeterminate")).withParent(xmlTag().withLocalName(string().equalTo("md-checkbox")).withNamespace(string().equalTo("http://www.w3.org/1999/html")))]]></place>
+    </injection>
+    <injection language="AngularJS" injector-id="xml">
+      <display-name>md-checkbox/@ng-checked</display-name>
+      <place><![CDATA[xmlAttribute().withLocalName(string().equalTo("ng-checked")).withParent(xmlTag().withLocalName(string().equalTo("md-checkbox")).withNamespace(string().equalTo("http://www.w3.org/1999/html")))]]></place>
+    </injection>
+    <injection language="AngularJS" injector-id="xml">
+      <display-name>md-checkbox/@ng-click</display-name>
+      <place><![CDATA[xmlAttribute().withLocalName(string().equalTo("ng-click")).withParent(xmlTag().withLocalName(string().equalTo("md-checkbox")).withNamespace(string().equalTo("http://www.w3.org/1999/html")))]]></place>
+    </injection>
+    <injection language="AngularJS" injector-id="xml">
+      <display-name>md-option/@ng-repeat</display-name>
+      <place><![CDATA[xmlAttribute().withLocalName(string().equalTo("ng-repeat")).withParent(xmlTag().withLocalName(string().equalTo("md-option")).withNamespace(string().equalTo("http://www.w3.org/1999/html")))]]></place>
+    </injection>
+    <injection language="AngularJS" injector-id="xml">
+      <display-name>md-option/@ng-selected</display-name>
+      <place><![CDATA[xmlAttribute().withLocalName(string().equalTo("ng-selected")).withParent(xmlTag().withLocalName(string().equalTo("md-option")).withNamespace(string().equalTo("http://www.w3.org/1999/html")))]]></place>
+    </injection>
+    <injection language="AngularJS" injector-id="xml">
+      <display-name>md-select/@ng-model</display-name>
+      <place><![CDATA[xmlAttribute().withLocalName(string().equalTo("ng-model")).withParent(xmlTag().withLocalName(string().equalTo("md-select")).withNamespace(string().equalTo("http://www.w3.org/1999/html")))]]></place>
+    </injection>
+    <injection language="AngularJS" injector-id="xml">
+      <display-name>span/@ng-show</display-name>
+      <place><![CDATA[xmlAttribute().withLocalName(string().equalTo("ng-show")).withParent(xmlTag().withLocalName(string().equalTo("span")).withNamespace(string().equalTo("http://www.w3.org/1999/html")))]]></place>
     </injection>
   </component>
 </application>
