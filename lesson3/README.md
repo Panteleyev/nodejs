@@ -1,18 +1,26 @@
-# nodejs Lesson3
+# nodejs 
 
-Программа для получения информации о последних новостей с сайта http://news.panasonic.com/jp/press/ в структурированном виде с выбора языка.
-Поддерживаемые языки: японский, нглийский и русский (автоматический перевод):
+##  Lesson 3
+
+Работа с сетевыми запросами
+
+##  Home work
+
+Программа для получения информации о последних новостей с сайта [プレスリリース | Panasonic Newsroom Japan](http://news.panasonic.com/jp/press/) в структурированном виде с возможностью выбора языка.
+Поддерживаемые языки: японский, английский и русский (автоматический перевод через сервис «API Яндекс.Переводчик»):
 Для выбора языка нужно в качестве аргуметна указать одно из следующих значений:
-• japanese
-• english
-• russian
+
+- japanese
+- english
+- russian
+
 Если не указать аргумент, то принимается по умолчанию 'japanese'. Регистр не учитывается.
 Если указать иное значение аргумента - выводится сообщение об ошибке и выполнение программы прекращается.
 
 Варианты запуска:
 
-• node homework.js
-• node homework.js unknown argument
-• node homework.js JAPANese
-• node homework.js english
-• node homework.js RUSsiAn
+- `node homework.js`
+- `node homework.js unknown argument`
+- `node homework.js JAPANese`
+- `node homework.js english`
+- `node homework.js RUSsiAn`
