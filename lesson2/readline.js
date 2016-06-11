@@ -6,6 +6,12 @@ var rl = readlline.createInterface({
   output: process.stdout
 });
 
+
+//rl.question('What is your favorite food?\n', function (answer) {
+//  console.log('Oh, so your favorite food is ' + answer);
+//});
+//rl.pause(); // Разблокирование ввода
+
 // Выведем информацию в консоль
 rl.write('Please, enter a command!\n');
 
