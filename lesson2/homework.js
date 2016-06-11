@@ -50,7 +50,8 @@ function Game() {
    *
    * @param fileName
    */
-  function ParseLog(fileName) {
+  function parseLog(fileName) {
+
     /**
      * Вычисляет максимальную длину последовательности значений value
      *
@@ -84,7 +85,7 @@ function Game() {
     }
 
     /**
-     * Поулчение статистики
+     * Получение и обработка статистики
      *
      * @param data {String} данные
      */
@@ -101,19 +102,16 @@ function Game() {
             winSequenceMaxLength  = getSequenceMaxLength.call(data, 1),
             failSequenceMaxLength = getSequenceMaxLength.call(data, 0);
 
-        console.log(
-          ('Data: ' + data.lines() +
-          '\nCommon counts: ' + commonCnt +
-          '\nWin count: ' + winCnt + ' (' + Math.round(winPercent) + '%)' +
-          '\nFail count: ' + failCnt + ' (' + Math.round(failPercent) + '%)').info
-        );
-
         winSequenceMaxLength  = (winSequenceMaxLength === 0) ? winCnt : winSequenceMaxLength;
         failSequenceMaxLength = (failSequenceMaxLength === 0) ? failCnt : failSequenceMaxLength;
 
         console.log(
           (
-            'Max length of win sequence: ' + winSequenceMaxLength +
+            'Data: ' + data.lines() +
+            '\nCommon counts: ' + commonCnt +
+            '\nWin count: ' + winCnt + ' (' + Math.round(winPercent) + '%)' +
+            '\nFail count: ' + failCnt + ' (' + Math.round(failPercent) + '%)' +
+            '\nMax length of win sequence: ' + winSequenceMaxLength +
             '\nMax length of fail sequence: ' + failSequenceMaxLength
           ).info
         );
@@ -133,9 +131,7 @@ function Game() {
         },
         function (data, callback) {
           console.log('\n\nStatistic'.head);
-
           getStats(data.toString());
-          // callback();
         }
       ], function (err, result) { // Общий обработчик
         if (err) throw err;
@@ -163,11 +159,11 @@ function Game() {
         console.log((variants[answer] + '? You lose!! Muahah!').fail);
       }
 
-      if (/^[-_.\w]*\.\w{1,4}$/i.test(fileName)) {
+      if (/^[-_.\w]*\.\w{1,4}$/i.test(fileName)) { // Проверка значения аргумента. Если содержит имя и расширение файла
         fs.appendFile('./' + fileName, (result) ? 1 : 0, function (err) {
           if (err)  throw err;
         });
-        ParseLog(fileName);
+        parseLog(fileName);
       }
       rl.close();
     });
