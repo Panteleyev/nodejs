@@ -1,23 +1,29 @@
 {
-  "name": "nodejs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
+  "name":         "nodejs",
+  "version":      "1.0.0",
+  "description":  "",
+  "main":         "index.js",
+  "scripts":      {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
+  "repository":   {
     "type": "git",
-    "url": "git+https://github.com/Panteleyev/nodejs.git"
+    "url":  "git+https://github.com/Panteleyev/nodejs.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
+  "keywords":     [],
+  "author":       "",
+  "license":      "ISC",
+  "bugs":         {
     "url": "https://github.com/Panteleyev/nodejs/issues"
   },
-  "homepage": "https://github.com/Panteleyev/nodejs#readme",
+  "homepage":     "https://github.com/Panteleyev/nodejs#readme",
   "dependencies": {
-    "ansi": "^0.3.1"
+    "ansi":     "^0.3.1",
+    "async":    "^2.0.0-rc.5",
+    "colors":   "^1.1.2",
+    "fs":       "0.0.2",
+    "minimist": "^1.2.0",
+    "readline": "^1.3.0",
+    "util":     "^0.10.3"
   }
 }
