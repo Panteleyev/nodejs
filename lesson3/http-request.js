@@ -1,4 +1,5 @@
 // POST запрос через http модуль
+// низкоуровневый
 
 var queryString = require('querystring');
 var http        = require('http');
@@ -7,6 +8,8 @@ var http        = require('http');
 var postData = queryString.stringify({
   msg: 'Hello World!'
 });
+
+//console.log('postData is: ', postData);
 
 // Определяем настройки запроса
 var options = {
@@ -36,8 +39,11 @@ var req = http
       console.log('No more data in response.');
     });
   })
-  .on('error', function (e) {
-    console.error('problem with request: ', e.message);
+  //  .on('error', function (e) {
+  //    console.error('problem with request: ', e.message);
+  //  });
+  .on('error', function (error) {
+    throw error;
   });
 
 // Запись тела запроса
