@@ -26,8 +26,10 @@ var options = {
 // Устанавливаем запрос
 var req = http
   .request(options, function (res) {
-    console.log('response: ', res.statusCode);
+    console.log('status: ', res.statusCode);
     console.log('http headers: ', res.headers);
+
+    res.setEncoding('utf8');
 
     // Событие получения данных
     res.on('data', function (chunk) {
@@ -38,13 +40,18 @@ var req = http
     res.on('end', function () {
       console.log('No more data in response.');
     });
-  })
-  //  .on('error', function (e) {
-  //    console.error('problem with request: ', e.message);
-  //  });
-  .on('error', function (error) {
-    throw error;
   });
+////  .on('error', function (e) {
+////    console.error('problem with request: ', e.message);
+////  });
+//  .on('error', function (error) {
+//    throw error;
+//  });
+
+req.on('error', function (error) {
+  throw error;
+});
+
 
 // Запись тела запроса
 req.write(postData);

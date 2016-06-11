@@ -24,11 +24,14 @@ request({
 //  method: 'get',
 //  uri:    'http://lj.ru/'
 //}, function (error, response, body) {
-//  if (error) {
-////    return console.error(error);
-//    throw error;
-//  }
+////  if (error) {
+//////    return console.error(error);
+////    throw error;
+////  }
+////  console.log('status code is: ', response.statusCode);
+////  console.log(body);
 //
-//  console.log('status code is: ', response.statusCode);
-//  console.log(body);
+//  if (!error && response.statusCode == 200) {
+//    console.log(body); // Print the google web page
+//  }
 //});

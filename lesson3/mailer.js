@@ -4,8 +4,8 @@ var settings = require('./settings-mailer');
 
 var nodeMailer = require('nodemailer');
 
-// Создаем транспорт, через который будем отправлять сообщение
-var transporter = nodeMailer.createTransport({
+// Создаем транспорт, через который будем отправлять сообщение (opens pool of SMTP connections)
+var smtpTransport = nodeMailer.createTransport({
   service: 'Yandex',
   auth:    {
     user: settings.login,
@@ -23,7 +23,7 @@ var mailOptions = {
 };
 
 // Отправляем сообщение
-transporter.sendMail(mailOptions, function (error, info) {
+smtpTransport.sendMail(mailOptions, function (error, info) {
   if (error) {
 //    return console.error(error);
     throw error;
@@ -31,4 +31,7 @@ transporter.sendMail(mailOptions, function (error, info) {
 
   console.log('Message info: ', info.response);
   console.log('Full info: ', info);
+
+  // shut down the connection pool, no more messages
+  //smtpTransport.lose();
 });

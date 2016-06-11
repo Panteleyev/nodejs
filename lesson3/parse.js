@@ -41,4 +41,16 @@ request('http://www.rbc.ru/', function (error, response, html) {
   $('.indicators_vert__ticker__td').each(function (i, element) {
     console.log($(element).text().trim());
   });
+
+//  if (!error && response.statusCode == 200){
+//    var $ = cheerio.load(html);
+//    $('#js-rateContainer tr').each(function (i, element){
+//      var cols = $(this).find('td');
+//      console.dir(
+//        cols.eq(0).text() +
+//        ' ' + cols.eq(1).text() +
+//        ' ' + cols.eq(2).text()
+//      );
+//    });
+//  }
 });
