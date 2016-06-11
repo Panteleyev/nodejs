@@ -10,19 +10,19 @@ fs.stat('./env.js', function (err, file) {
   console.log('.isFile() as: ', file.isFile);
 
   // Для сравнения с async-examples.js // START
-  fs.readFile('./fileWorks.js', function (err, data) {
-    if (err)
-      throw err;
-
-    console.log('data as: ', data.toString());
-
-    fs.appendFile('./test-file.txt', 'Secret\n', function (err) {
-      if (err)
-        throw err;
-
-      // Do staff!!!
-    });
-  });
+//  fs.readFile('./fileWorks.js', function (err, data) {
+//    if (err)
+//      throw err;
+//
+//    console.log('data as: ', data.toString());
+//
+//    fs.appendFile('./test-file.txt', 'Secret\n', function (err) {
+//      if (err)
+//        throw err;
+//
+//      // Do staff!!!
+//    });
+//  });
   // Для сравнения с async-examples.js // END
 });
 

@@ -1,7 +1,7 @@
 // Пример исопльзования модуля readline
-var readlline = require('readline');
+var readLine = require('readline');
 
-var rl = readlline.createInterface({
+var rl = readLine.createInterface({
   input:  process.stdin,
   output: process.stdout
 });

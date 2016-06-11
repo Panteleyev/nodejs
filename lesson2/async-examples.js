@@ -30,8 +30,10 @@ async.waterfall([
     function (data, callback) {
       console.log('Data from a file: ', data.toString());
 
+      
+      
       // callback();
-      // Добавляемданные в файл
+      // Добавляем данные в файл
       fs.appendFile(FILE_NAME, 'our sweety string\n', callback);
     }
 
