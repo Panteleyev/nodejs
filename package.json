@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Panteleyev/nodejs#readme",
   "dependencies": {
-    "ansi": "^0.3.1"
+    "ansi": "^0.3.1",
+    "colors": "^1.1.2"
   }
 }

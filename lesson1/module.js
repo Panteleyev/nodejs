@@ -1,12 +1,12 @@
 // Пример создания модуля
 
 function sayNo() {
-    console.log('No!');
+  return 'No!';
 }
 
 function sayYes() {
-    console.log('Yes!');
+  return 'Yes!';
 }
 
-module.exports.sayNo = sayNo;
+module.exports.sayNo  = sayNo;
 module.exports.sayYes = sayYes;
