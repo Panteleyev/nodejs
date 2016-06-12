@@ -8,8 +8,6 @@ var cursor    = ansi(process.stdout);
 var colorTest = require('colors'),
     color     = 'grey',
     bgColor   = 'bgCyan',
-    styles    = 'bold',
-    extras    = 'rainbow',
     txtHello  = 'Hello, world!\nWe are ready to beep!',
     txtInfo   = '\n* This is test.';
 
