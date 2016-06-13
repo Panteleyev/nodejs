@@ -111,11 +111,15 @@ function reDraw(data, newsCount, res) {
  * @returns {string}
  */
 function convert(charset, html) {
-  var iconvLite = require('iconv-lite'), // Должно быть iconv
+  //TODO(Panteleev): Проблема с поддержкой shift_jis. Разобраться с установкой модуля iconv
+  var iconvLite = require('iconv-lite'), //TODO(Panteleev): применить модуль iconv
       htmlTmp   = '';
 
-//  var iconv     = require('iconv-js'),
-//  htmlTmp = iconv.fromSJIS(new Buffer(html, 'binary'));
+  /*
+   //TODO(Panteleev): Разобраться с модулью iconv-js
+   var iconv     = require('iconv-js'),
+   htmlTmp = iconv.fromSJIS(new Buffer(html, 'binary'));
+   */
 
   htmlTmp = iconvLite.encode(
     iconvLite.decode(
@@ -152,7 +156,7 @@ function getNews(url, charset, newsCount, callback) {
       if (charset == 'auto') {
         $ = cheerio.load(html);
       } else {
-        $ = cheerio.load(convert(charset, html)); // Проблема с shift_jis
+        $ = cheerio.load(convert(charset, html));
       }
 
       var dates, titles;
