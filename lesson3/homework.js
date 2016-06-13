@@ -1,13 +1,15 @@
 var language = process.argv[2],
     request  = require('request'),
-    cheerio  = require('cheerio');
+    cheerio  = require('cheerio'),
+    jpURI    = 'http://news.panasonic.com/jp/press/',
+    enURI    = 'http://news.panasonic.com/global/press/';
 
 if (language === undefined || language.toLowerCase() == 'japanese') {
-  getNews('http://news.panasonic.com/jp/press/', false);
+  getNews(jpURI, false);
 } else if (language.toLowerCase() == 'english') {
-  getNews('http://news.panasonic.com/global/press/', false);
+  getNews(enURI, false);
 } else if (language.toLowerCase() == 'russian') {
-  getNews('http://news.panasonic.com/global/press/', true);
+  getNews(enURI, true);
 } else {
   return console.log('Unknown language. Please type \'japanese\' or \'english\' or \'russian\'.');
 }

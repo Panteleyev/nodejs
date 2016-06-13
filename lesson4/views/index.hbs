@@ -1,7 +1,22 @@
-<html>
-<header>Handlebars template for nodeJS</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Handlebars template for nodeJS / {{title}}</title>
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
 <body>
-<p>Сейчас уже {{moment}}!<br>
-  Пора {{#each action}} {{this}}{{/each}}.</p>
+<div class="entry">
+  <h1>{{title}}</h1>
+  {{#if error}}<h2>Ошибка! {{error}}</h2>{{/if}}
+  <div class="body">
+    <p>Сейчас уже {{moment}}!</p>
+    <ul class="action-list">
+      {{#each action}}
+      <li>{{this}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
 </body>
 </html>

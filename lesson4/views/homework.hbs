@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ニュース / {{title}}</title>
+  <link rel="stylesheet" href="/styles/homework.css">
+  <script src="/resources/homework-range.js"></script>
+</head>
+<body>
+<div class="news-block">
+  <h1>{{title}}・ニュース</h1>
+  <form action="." method="post">
+    <fieldset>
+      <legend>設定</legend>
+      <p>
+        <label for="website">ウェブサイト:</label>
+        <select name="site_name" id="website">{{{options}}}</select>&nbsp;
+        <label id="labelRange" for="lines">回線の数: {{countNews}}</label>
+        <input onchange="" onInput="onInputCount('回線の数', 'lines', 'labelRange')" type="range" name="news_count" id="lines" min="1" max="30" step="1" value="{{countNews}}">
+      </p>
+      <input type="submit" value="[ 送信する ]">
+    </fieldset>
+  </form>
+  <div>
+    <p>今: {{now}}</p>
+    <ol class="news-list">
+      {{#each news}}
+      <li>{{this.title}}<p class="date">&nbsp;&nbsp;{{this.date}}</p></li>
+      {{/each}}
+    </ol>
+  </div>
+</div>
+</body>
+</html>

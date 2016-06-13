@@ -1,0 +1,178 @@
+$bg0: lavender;
+$grey0: lightgrey;
+$grey1: darkgrey;
+$txtColor0: cornflowerblue;
+$dateTxtColor: sandybrown;
+
+body, html {
+  margin:           0;
+  background-color: $grey0;
+  font-size:        14px;
+}
+
+.news-block {
+  background-color: $bg0;
+  color:            $txtColor0;
+  padding:          5px 5px;
+
+  fieldset {
+    border:        5px solid white;
+    margin-bottom: 10px;
+
+    select, input[type=submit] {
+      border:           none;
+      background-color: $grey0;
+      color:            $txtColor0;
+      outline:          none;
+    }
+
+    input[type=submit] {
+      float:  right;
+      cursor: pointer;
+      border: 1px solid $grey0;
+    }
+
+    input[type=submit]:active {
+      background-color: white;
+      border: 1px solid $txtColor0;
+    }
+
+    $rangeTrackOnMouseDownColor1: $grey0;
+    $rangeTrackSelected: $txtColor0;
+    $rangeTrackHeight: 5px;
+    $rangeTrackBorderRadius: 2px;
+    //$rangeTrackWidth: 300px;
+    $rangeTrackOutLineColor: $bg0;
+    $rangeTrackBorderLowerRadiusIE: $rangeTrackBorderRadius;
+    $rangeTrackBorderUpperRadiusIE: $rangeTrackBorderRadius;
+    $rangeThumbOnMouseDownColor1: $txtColor0;
+    $rangeThumbBgColor: $grey0;
+    $rangeThumbBorder: 1px solid $bg0;
+    $rangeThumbWidth: 16px;
+    $rangeThumbHeight: 16px;
+    $rangeThumbBorderRadius: 0;
+    $rangeThumbMarginTopWebKit: -4px;
+
+    input[type=range] {
+      /*removes default webkit styles*/
+      -webkit-appearance: none;
+
+      /*fix for FF unable to apply focus style bug */
+      border:             1px solid $rangeTrackOutLineColor;
+
+      /*required for proper track sizing in FF*/
+      //width: $rangeTrackWidth;
+    }
+    input[type=range]::-webkit-slider-runnable-track {
+      //width: $rangeTrackWidth;
+      height:        $rangeTrackHeight;
+      background:    $grey0;
+      border:        none;
+      border-radius: $rangeTrackBorderRadius;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      border:             $rangeThumbBorder;
+      height:             $rangeThumbHeight;
+      width:              $rangeThumbWidth;
+      border-radius:      $rangeTrackBorderRadius;
+      background:         $rangeThumbBgColor;
+      margin-top:         $rangeThumbMarginTopWebKit;
+    }
+    input[type=range]:focus::-webkit-slider-thumb {
+      background: $rangeThumbOnMouseDownColor1;
+    }
+    input[type=range]:focus {
+      outline: none;
+    }
+    input[type=range]:focus::-webkit-slider-runnable-track {
+      background: $rangeTrackOnMouseDownColor1;
+    }
+
+    input[type=range]::-moz-range-track {
+      //width: $rangeTrackWidth;
+      height:        $rangeTrackHeight;
+      background:    $grey0;
+      border:        none;
+      border-radius: $rangeTrackBorderRadius;
+    }
+    input[type=range]::-moz-range-thumb {
+      border:        $rangeThumbBorder;
+      height:        $rangeThumbHeight;
+      width:         $rangeThumbWidth;
+      border-radius: $rangeThumbBorderRadius;
+      background:    $rangeThumbBgColor;
+    }
+    input[type=range]:focus::-moz-range-thumb {
+      background: $rangeThumbOnMouseDownColor1;
+    }
+
+    /*hide the outline behind the border*/
+    input[type=range]:-moz-focusring {
+      outline:        1px solid $rangeTrackOutLineColor;
+      outline-offset: -1px;
+    }
+
+    input[type=range]::-ms-track {
+      //width: $rangeTrackWidth;
+      height:       $rangeTrackHeight;
+
+      /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+      background:   transparent;
+
+      /*leave room for the larger thumb to overflow with a transparent border */
+      border-color: transparent;
+      border-width: 6px 0;
+
+      /*remove default tick marks*/
+      color:        transparent;
+    }
+    input[type=range]::-ms-fill-lower {
+      background:    $rangeTrackSelected;
+      border-radius: $rangeTrackBorderLowerRadiusIE;
+    }
+    input[type=range]::-ms-fill-upper {
+      background:    $grey0;
+      border-radius: $rangeTrackBorderUpperRadiusIE;
+    }
+    input[type=range]::-ms-thumb {
+      border:        $rangeThumbBorder;
+      height:        $rangeThumbHeight;
+      width:         $rangeThumbWidth;
+      border-radius: $rangeThumbBorderRadius;
+      background:    $rangeThumbBgColor;
+    }
+    input[type=range]:focus::-ms-thumb {
+      background: $rangeThumbOnMouseDownColor1;
+    }
+    input[type=range]:focus::-ms-fill-lower {
+      background: $rangeTrackSelected;
+    }
+    input[type=range]:focus::-ms-fill-upper {
+      background: $rangeTrackOnMouseDownColor1;
+    }
+
+  }
+
+  div {
+    border-top: 4px dotted ghostwhite;
+
+    .news-list li {
+      background-color: lavenderblush;
+      color:            lightblue;
+      font-weight:      bold;
+      padding:          2px;
+      border-bottom:    1px dashed darkseagreen;
+      max-width:        95%;
+
+      .date {
+        margin:      0;
+        float:       right;
+        color:       $dateTxtColor;
+        font-size:   10px;
+        display:     block;
+        white-space: nowrap;
+      }
+    }
+  }
+}

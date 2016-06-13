@@ -1,0 +1,23 @@
+body, html {
+  margin:           0;
+  background-color: lightgrey;
+}
+
+.entry {
+  background-color: lavender;
+  color:            cornflowerblue;
+  padding:          5px 10px;
+
+  .body {
+    border-top: 4px dotted ghostwhite;
+
+    .action-list li {
+      background-color: lavenderblush;
+      color:            lightblue;
+      font-weight:      bold;
+      padding:          2px;
+      border-bottom:    1px dashed darkseagreen;
+      max-width:        80%;
+    }
+  }
+}

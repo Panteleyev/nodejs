@@ -1,0 +1,111 @@
+body, html {
+  margin: 0;
+  background-color: lightgrey;
+  font-size: 14px; }
+
+.news-block {
+  background-color: lavender;
+  color: cornflowerblue;
+  padding: 5px 5px; }
+  .news-block fieldset {
+    border: 5px solid white;
+    margin-bottom: 10px;
+    /*hide the outline behind the border*/ }
+    .news-block fieldset select, .news-block fieldset input[type=submit] {
+      border: none;
+      background-color: lightgrey;
+      color: cornflowerblue;
+      outline: none; }
+    .news-block fieldset input[type=submit] {
+      float: right;
+      cursor: pointer;
+      border: 1px solid lightgrey; }
+    .news-block fieldset input[type=submit]:active {
+      background-color: white;
+      border: 1px solid cornflowerblue; }
+    .news-block fieldset input[type=range] {
+      /*removes default webkit styles*/
+      -webkit-appearance: none;
+      /*fix for FF unable to apply focus style bug */
+      border: 1px solid lavender;
+      /*required for proper track sizing in FF*/ }
+    .news-block fieldset input[type=range]::-webkit-slider-runnable-track {
+      height: 5px;
+      background: lightgrey;
+      border: none;
+      border-radius: 2px; }
+    .news-block fieldset input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      border: 1px solid lavender;
+      height: 16px;
+      width: 16px;
+      border-radius: 2px;
+      background: lightgrey;
+      margin-top: -4px; }
+    .news-block fieldset input[type=range]:focus::-webkit-slider-thumb {
+      background: cornflowerblue; }
+    .news-block fieldset input[type=range]:focus {
+      outline: none; }
+    .news-block fieldset input[type=range]:focus::-webkit-slider-runnable-track {
+      background: lightgrey; }
+    .news-block fieldset input[type=range]::-moz-range-track {
+      height: 5px;
+      background: lightgrey;
+      border: none;
+      border-radius: 2px; }
+    .news-block fieldset input[type=range]::-moz-range-thumb {
+      border: 1px solid lavender;
+      height: 16px;
+      width: 16px;
+      border-radius: 0;
+      background: lightgrey; }
+    .news-block fieldset input[type=range]:focus::-moz-range-thumb {
+      background: cornflowerblue; }
+    .news-block fieldset input[type=range]:-moz-focusring {
+      outline: 1px solid lavender;
+      outline-offset: -1px; }
+    .news-block fieldset input[type=range]::-ms-track {
+      height: 5px;
+      /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+      background: transparent;
+      /*leave room for the larger thumb to overflow with a transparent border */
+      border-color: transparent;
+      border-width: 6px 0;
+      /*remove default tick marks*/
+      color: transparent; }
+    .news-block fieldset input[type=range]::-ms-fill-lower {
+      background: cornflowerblue;
+      border-radius: 2px; }
+    .news-block fieldset input[type=range]::-ms-fill-upper {
+      background: lightgrey;
+      border-radius: 2px; }
+    .news-block fieldset input[type=range]::-ms-thumb {
+      border: 1px solid lavender;
+      height: 16px;
+      width: 16px;
+      border-radius: 0;
+      background: lightgrey; }
+    .news-block fieldset input[type=range]:focus::-ms-thumb {
+      background: cornflowerblue; }
+    .news-block fieldset input[type=range]:focus::-ms-fill-lower {
+      background: cornflowerblue; }
+    .news-block fieldset input[type=range]:focus::-ms-fill-upper {
+      background: lightgrey; }
+  .news-block div {
+    border-top: 4px dotted ghostwhite; }
+    .news-block div .news-list li {
+      background-color: lavenderblush;
+      color: lightblue;
+      font-weight: bold;
+      padding: 2px;
+      border-bottom: 1px dashed darkseagreen;
+      max-width: 95%; }
+      .news-block div .news-list li .date {
+        margin: 0;
+        float: right;
+        color: sandybrown;
+        font-size: 10px;
+        display: block;
+        white-space: nowrap; }
+
+/*# sourceMappingURL=homework.css.map */

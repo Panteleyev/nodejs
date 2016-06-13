@@ -3,8 +3,9 @@
 // npm install handlebars
 
 var express  = require('express'),
-    template = require('consolidate').handlebars,
-    app      = express(),
+    template = require('consolidate') // подлючаем поддержку шаблонизатора
+      .handlebars,
+    app      = express(), // создаем приложение
 
     PORT     = 8000;
 
@@ -12,19 +13,23 @@ var express  = require('express'),
 app.engine('hbs', template);
 
 // Устанавливаем переменные для обработки шаблонов
-app.set('view engine', 'hbs');
-app.set('views', __dirname + '/views');
+app.set('view engine', 'hbs'); // по умолчанию используем .hbs шаблоны
+app.set('views', __dirname + '/views'); // указываем директорию для загрузки шаблонов
+app.use(express.static(__dirname + '/')); // путь к статике для отдачи файлов сервером
 
+// обрабатываем запросы к главной странице
 app.get('/', function (req, res) {
   // Рендеринг шаблона
   res.render('index', {
+    title:  'Ежедненик',
     moment: new Date(),
-    action: ['спать']
+    action: ['есть', 'мыться', 'спать']
   });
 });
 
 app.get('/worker', function (req, res) {
   res.render('index', {
+    title:  'Ежедненик программиста',
     moment: new Date(),
     action: ['вставать', 'написать программу']
   });

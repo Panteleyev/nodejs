@@ -1,0 +1,19 @@
+body, html {
+  margin: 0;
+  background-color: lightgrey; }
+
+.entry {
+  background-color: lavender;
+  color: cornflowerblue;
+  padding: 5px 10px; }
+  .entry .body {
+    border-top: 4px dotted ghostwhite; }
+    .entry .body .action-list li {
+      background-color: lavenderblush;
+      color: lightblue;
+      font-weight: bold;
+      padding: 2px;
+      border-bottom: 1px dashed darkseagreen;
+      max-width: 80%; }
+
+/*# sourceMappingURL=index.css.map */
