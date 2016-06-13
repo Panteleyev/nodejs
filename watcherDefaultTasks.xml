@@ -38,7 +38,7 @@
       <option name="workingDir" value="$ProjectFileDir$" />
       <envs />
     </TaskOptions>
-    <TaskOptions isEnabled="true">
+    <TaskOptions isEnabled="false">
       <option name="arguments" value="$FileName$ --pretty" />
       <option name="checkSyntaxErrors" value="true" />
       <option name="description" value="Compiles .jade files into .html files" />
