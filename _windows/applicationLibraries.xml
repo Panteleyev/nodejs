@@ -123,6 +123,17 @@
       </CLASSES>
       <SOURCES />
     </library>
+    <library name="consolidate-DefinitelyTyped" type="javaScript">
+      <properties>
+        <sourceFilesUrls>
+          <item url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_consolidate_consolidate.d.ts" />
+        </sourceFilesUrls>
+      </properties>
+      <CLASSES>
+        <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_consolidate_consolidate.d.ts" />
+      </CLASSES>
+      <SOURCES />
+    </library>
     <library name="d3-DefinitelyTyped" type="javaScript">
       <properties>
         <sourceFilesUrls>
