@@ -90,6 +90,17 @@
       </CLASSES>
       <SOURCES />
     </library>
+    <library name="body-parser-DefinitelyTyped" type="javaScript">
+      <properties>
+        <sourceFilesUrls>
+          <item url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_body-parser_body-parser.d.ts" />
+        </sourceFilesUrls>
+      </properties>
+      <CLASSES>
+        <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_body-parser_body-parser.d.ts" />
+      </CLASSES>
+      <SOURCES />
+    </library>
     <library name="cheerio-DefinitelyTyped" type="javaScript">
       <properties>
         <sourceFilesUrls>
@@ -123,6 +134,17 @@
       </CLASSES>
       <SOURCES />
     </library>
+    <library name="express-debug-DefinitelyTyped" type="javaScript">
+      <properties>
+        <sourceFilesUrls>
+          <item url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_express-debug_express-debug.d.ts" />
+        </sourceFilesUrls>
+      </properties>
+      <CLASSES>
+        <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_express-debug_express-debug.d.ts" />
+      </CLASSES>
+      <SOURCES />
+    </library>
     <library name="express-DefinitelyTyped" type="javaScript">
       <properties>
         <sourceFilesUrls>
@@ -131,6 +153,50 @@
       </properties>
       <CLASSES>
         <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_express_express.d.ts" />
+      </CLASSES>
+      <SOURCES />
+    </library>
+    <library name="express-domain-middleware-DefinitelyTyped" type="javaScript">
+      <properties>
+        <sourceFilesUrls>
+          <item url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_express-domain-middleware_express-domain-middleware.d.ts" />
+        </sourceFilesUrls>
+      </properties>
+      <CLASSES>
+        <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_express-domain-middleware_express-domain-middleware.d.ts" />
+      </CLASSES>
+      <SOURCES />
+    </library>
+    <library name="express-partials-DefinitelyTyped" type="javaScript">
+      <properties>
+        <sourceFilesUrls>
+          <item url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_express-partials_express-partials.d.ts" />
+        </sourceFilesUrls>
+      </properties>
+      <CLASSES>
+        <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_express-partials_express-partials.d.ts" />
+      </CLASSES>
+      <SOURCES />
+    </library>
+    <library name="express-route-fs-DefinitelyTyped" type="javaScript">
+      <properties>
+        <sourceFilesUrls>
+          <item url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_express-route-fs_express-route-fs.d.ts" />
+        </sourceFilesUrls>
+      </properties>
+      <CLASSES>
+        <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_express-route-fs_express-route-fs.d.ts" />
+      </CLASSES>
+      <SOURCES />
+    </library>
+    <library name="express-validator-DefinitelyTyped" type="javaScript">
+      <properties>
+        <sourceFilesUrls>
+          <item url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_express-validator_express-validator.d.ts" />
+        </sourceFilesUrls>
+      </properties>
+      <CLASSES>
+        <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_express-validator_express-validator.d.ts" />
       </CLASSES>
       <SOURCES />
     </library>
