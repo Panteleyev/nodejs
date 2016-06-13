@@ -161,56 +161,20 @@ function getNews(url, charset, newsCount, callback) {
 
       var dates, titles;
       if (url === 'http://www.sanwa-meter.co.jp/japan/info/news.php') {
-        dates  = $('#info_news_list > li > .info_news_date').map(
-          function (i, element) {
-            return (i + 1 > newsCount) ? null : $(element).text().trim();
-          }
-        );
-        titles = $('#info_news_list > li > .info_news_title > a').map(
-          function (i, element) {
-            return (i + 1 > newsCount) ? null : $(element).text().trim();
-          }
-        );
+        dates  = parseData($, '#info_news_list > li > .info_news_date', newsCount);
+        titles = parseData($, '#info_news_list > li > .info_news_title > a', newsCount);
       } else if (url === 'http://www.sanwa.co.jp/top_news/back_number2015.html') {
-        dates  = $('#wrap-container .backno-list > dl > dt').map(
-          function (i, element) {
-            return (i + 1 > newsCount) ? null : $(element).text().trim();
-          }
-        );
-        titles = $('#wrap-container .backno-list > dl > dd > a').map(
-          function (i, element) {
-            return (i + 1 > newsCount) ? null : $(element).text().trim();
-          }
-        );
+        dates  = parseData($, '#wrap-container .backno-list > dl > dt', newsCount);
+        titles = parseData($, '#wrap-container .backno-list > dl > dd > a', newsCount);
       } else if (url === 'https://www.sanwa-comp.co.jp/') {
-        dates  = $('#topFreeArea > table > tbody > tr:nth-child(2) div > table > tbody > tr > td:nth-child(1)').map(
-          function (i, element) {
-            return (i + 1 > newsCount) ? null : $(element).text().trim();
-          }
-        );
-        titles = $('#topFreeArea > table > tbody > tr:nth-child(2) div > table > tbody > tr > td:nth-child(2) > a').map(
-          function (i, element) {
-            return (i + 1 > newsCount) ? null : $(element).text().trim();
-          }
-        );
+        dates  = parseData($, '#topFreeArea > table > tbody > tr:nth-child(2) div > table > tbody > tr > td:nth-child(1)', newsCount);
+        titles = parseData($, '#topFreeArea > table > tbody > tr:nth-child(2) div > table > tbody > tr > td:nth-child(2) > a', newsCount);
       } else if (url === 'http://news.panasonic.com/jp/press/') {
-        dates  = $('.pnr_release_list > li > .date').map(
-          function (i, element) {
-            return (i + 1 > newsCount) ? null : $(element).text().trim();
-          }
-        );
-        titles = $('.pnr_release_list > li > .link > h2 > a').map(
-          function (i, element) {
-            return (i + 1 > newsCount) ? null : $(element).text().trim();
-          }
-        );
+        dates  = parseData($, '.pnr_release_list > li > .date', newsCount);
+        titles = parseData($, '.pnr_release_list > li > .link > h2 > a', newsCount);
       } else if (url === 'http://www.sony.co.jp/SonyInfo/News/ServiceArea/') {
         dates  = [];
-        titles = $('.news > li > a').map(
-          function (i, element) {
-            return (i + 1 > newsCount) ? null : $(element).text().trim();
-          }
-        );
+        titles = parseData($, '.news > li > a', newsCount);
       }
 
       var i, date, results = [];
@@ -227,6 +191,22 @@ function getNews(url, charset, newsCount, callback) {
       }
     }
   });
+}
+
+/**
+ * Парсинг данных
+ *
+ * @param $
+ * @param path {string}
+ * @param maxCount {number}
+ * @returns {JQuery|*|jQuery}
+ */
+function parseData($, path, maxCount) {
+  return $(path).map(
+    function (i, element) {
+      return (i + 1 > maxCount) ? null : $(element).text().trim();
+    }
+  );
 }
 
 /**
