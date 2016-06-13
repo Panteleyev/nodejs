@@ -34,7 +34,7 @@ body, html {
 
     input[type=submit]:active {
       background-color: white;
-      border: 1px solid $txtColor0;
+      border:           1px solid $txtColor0;
     }
 
     $rangeTrackOnMouseDownColor1: $grey0;
@@ -54,13 +54,13 @@ body, html {
     $rangeThumbMarginTopWebKit: -4px;
 
     input[type=range] {
-      /*removes default webkit styles*/
+      //removes default webkit styles
       -webkit-appearance: none;
 
-      /*fix for FF unable to apply focus style bug */
+      //fix for FF unable to apply focus style bug
       border:             1px solid $rangeTrackOutLineColor;
 
-      /*required for proper track sizing in FF*/
+      //required for proper track sizing in FF
       //width: $rangeTrackWidth;
     }
     input[type=range]::-webkit-slider-runnable-track {
@@ -107,7 +107,7 @@ body, html {
       background: $rangeThumbOnMouseDownColor1;
     }
 
-    /*hide the outline behind the border*/
+    //hide the outline behind the border
     input[type=range]:-moz-focusring {
       outline:        1px solid $rangeTrackOutLineColor;
       outline-offset: -1px;
@@ -117,14 +117,14 @@ body, html {
       //width: $rangeTrackWidth;
       height:       $rangeTrackHeight;
 
-      /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+      //remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead
       background:   transparent;
 
-      /*leave room for the larger thumb to overflow with a transparent border */
+      //leave room for the larger thumb to overflow with a transparent border
       border-color: transparent;
       border-width: 6px 0;
 
-      /*remove default tick marks*/
+      //remove default tick marks
       color:        transparent;
     }
     input[type=range]::-ms-fill-lower {

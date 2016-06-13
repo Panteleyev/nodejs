@@ -9,8 +9,7 @@ body, html {
   padding: 5px 5px; }
   .news-block fieldset {
     border: 5px solid white;
-    margin-bottom: 10px;
-    /*hide the outline behind the border*/ }
+    margin-bottom: 10px; }
     .news-block fieldset select, .news-block fieldset input[type=submit] {
       border: none;
       background-color: lightgrey;
@@ -24,11 +23,8 @@ body, html {
       background-color: white;
       border: 1px solid cornflowerblue; }
     .news-block fieldset input[type=range] {
-      /*removes default webkit styles*/
       -webkit-appearance: none;
-      /*fix for FF unable to apply focus style bug */
-      border: 1px solid lavender;
-      /*required for proper track sizing in FF*/ }
+      border: 1px solid lavender; }
     .news-block fieldset input[type=range]::-webkit-slider-runnable-track {
       height: 5px;
       background: lightgrey;
@@ -66,12 +62,9 @@ body, html {
       outline-offset: -1px; }
     .news-block fieldset input[type=range]::-ms-track {
       height: 5px;
-      /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
       background: transparent;
-      /*leave room for the larger thumb to overflow with a transparent border */
       border-color: transparent;
       border-width: 6px 0;
-      /*remove default tick marks*/
       color: transparent; }
     .news-block fieldset input[type=range]::-ms-fill-lower {
       background: cornflowerblue;

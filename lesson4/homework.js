@@ -54,7 +54,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.get('/', function (req, res) {
-  var data, siteName, newsCount, optionSettings;
+  var data, siteName, newsCount;
   if (req.cookies.site_name) {
     siteName  = req.cookies.site_name;
     newsCount = req.cookies.news_count;
