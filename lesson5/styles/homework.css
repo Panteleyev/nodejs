@@ -27,8 +27,9 @@ body, html {
       border: 1px solid cornflowerblue; }
     .news-block fieldset input[type=text] {
       color: lightblue;
+      border: 1px solid lightgrey;
       font-weight: bold;
-      background-color: lavenderblush;
+      background-color: white;
       padding: 5px; }
   .news-block div {
     border-top: 4px dotted ghostwhite; }
@@ -39,6 +40,9 @@ body, html {
       padding: 2px;
       border-bottom: 1px dashed darkseagreen;
       max-width: 95%; }
+      .news-block div .todo-list li input[type=text] {
+        color: lightblue;
+        border: 1px solid lightgrey; }
       .news-block div .todo-list li .btn {
         float: right;
         color: white; }

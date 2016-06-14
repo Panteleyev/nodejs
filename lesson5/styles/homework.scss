@@ -46,8 +46,9 @@ body, html {
 
     input[type=text] {
       color:            $liTxtColor0;
+      border:           1px solid $grey0;
       font-weight:      bold;
-      background-color: $bg1;
+      background-color: white;
       padding:          5px;
     }
   }
@@ -62,6 +63,10 @@ body, html {
       padding:          2px;
       border-bottom:    1px dashed darkseagreen;
       max-width:        95%;
+
+      input[type=text] {
+        border:           1px solid $grey0;
+      }
 
       .btn {
         float: right;
