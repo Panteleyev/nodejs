@@ -29,7 +29,7 @@ var config         = require('./config'),
 
       // Добавить задачу
       add: function (data, callback) {
-        if (data.title !== ''){
+        if (data.title !== '') {
           this.executeQuery(
             'INSERT INTO todos SET ?',
             [{

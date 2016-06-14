@@ -1,7 +1,7 @@
 body, html {
   margin: 0;
   background-color: lightgrey;
-  font-size: 14px; }
+  font: normal 14px Arial; }
 
 .news-block {
   background-color: lavender;
@@ -10,26 +10,10 @@ body, html {
   .news-block fieldset {
     border: 5px solid white;
     margin-bottom: 10px; }
-    .news-block fieldset select, .news-block fieldset input, .news-block fieldset .btn {
-      border: none;
-      background-color: lightgrey;
-      color: cornflowerblue;
-      outline: none; }
     .news-block fieldset .add {
-      color: black;
       background-color: darkseagreen; }
-    .news-block fieldset input[type=submit], .news-block fieldset .btn {
-      float: right;
-      cursor: pointer;
-      border: 1px solid lightgrey; }
-    .news-block fieldset input[type=submit]:active {
-      background-color: white;
-      border: 1px solid cornflowerblue; }
     .news-block fieldset input[type=text] {
-      color: lightblue;
-      border: 1px solid lightgrey;
       font-weight: bold;
-      background-color: white;
       padding: 5px; }
   .news-block div {
     border-top: 4px dotted ghostwhite; }
@@ -38,19 +22,26 @@ body, html {
       color: lightblue;
       font-weight: bold;
       padding: 2px;
-      border-bottom: 1px dashed darkseagreen;
+      border-bottom: 1px dashed lavender;
       max-width: 95%; }
       .news-block div .todo-list li input[type=text] {
-        color: lightblue;
         border: 1px solid lightgrey; }
-      .news-block div .todo-list li .btn {
-        float: right;
-        color: white; }
       .news-block div .todo-list li .change {
         background-color: cornflowerblue; }
       .news-block div .todo-list li .complete {
         background-color: darkseagreen; }
       .news-block div .todo-list li .delete {
         background-color: crimson; }
+  .news-block input {
+    outline: none; }
+  .news-block .btn {
+    color: white;
+    cursor: pointer;
+    float: right; }
+  .news-block input[type=text] {
+    color: lightblue;
+    border: 1px solid lightgrey;
+    font-weight: bold;
+    padding: 3px; }
 
 /*# sourceMappingURL=homework.css.map */
