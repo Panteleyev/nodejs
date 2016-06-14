@@ -16,7 +16,7 @@
         <label for="website">ウェブサイト:</label>
         <select name="site_name" id="website">{{{options}}}</select>&nbsp;
         <label id="labelRange" for="lines">回線の数: {{countNews}}</label>
-        <input onchange="" onInput="onInputCount('回線の数', 'lines', 'labelRange')" type="range" name="news_count" id="lines" min="1" max="30" step="1" value="{{countNews}}">
+        <input onInput="onInputCount('回線の数', 'lines', 'labelRange')" type="range" name="news_count" id="lines" min="1" max="30" step="1" value="{{countNews}}">
       </p>
       <input type="submit" value="[ 送信する ]">
     </fieldset>

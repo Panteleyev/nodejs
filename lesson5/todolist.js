@@ -1,39 +1,81 @@
-// Пример модуля для обработки задач
-var connect = require('./pool-server.js');
+var config         = require('./config'),
+    mysql          = require('mysql'),
+    connectionPool = mysql.createPool(config),
+    todoList       = {
+      executeQuery: function (query, params, callback) {
+        connectionPool.getConnection(function (err, connection) {
+          if (err) throw err;
 
-var todoList = {
-  // Получение всех задач
-  list: function (callback) {
-    connect.getTasks(function (err, rows) {
-      if (err) {
-        throw err;
+          query = connection.format(query, params);
+          console.log('SQL: [' + query + ']');
+
+          connection.query(query, function (err, rows) {
+            if (err) throw err;
+
+//            console.log('rows is: ', rows);
+            callback(rows);
+            connection.release();
+          });
+        });
+      },
+
+      // Получение всех задач
+      list: function (callback) {
+        this.executeQuery(
+          'SELECT * FROM todos ORDER BY ??',
+          ['id'],
+          callback
+//          function (err, rows) {
+//            if (err) {
+//              throw err;
+//            }
+//
+//            console.log('rows: ', rows);
+//          }
+        );
+      },
+
+      // Добавить задачу
+      add: function (data, callback) {
+        if (data.title !== ''){
+          this.executeQuery(
+            'INSERT INTO todos SET ?',
+            [{
+              text:      data.title,
+              completed: data.status
+            }],
+            callback
+          );
+        } else callback();
+      },
+
+      // Изменить описание задачи
+      change: function (id, data, callback) {
+        this.executeQuery(
+          'UPDATE todos SET ? WHERE ??=?',
+          [{text: data.title}, 'id', id],
+          callback
+        );
+      },
+
+      // Отметить задачу как сделанную
+      complete: function (id, callback) {
+        this.executeQuery(
+          'UPDATE todos SET ? WHERE ??=?',
+          [{completed: 'true'}, 'id', id],
+          callback
+        );
+      },
+
+      // Удаление задачи
+      delete: function (id, callback) {
+        this.executeQuery(
+          'DELETE FROM todos WHERE ??=?',
+          ['id', id],
+          callback
+        );
       }
+    };
 
-      console.log('rows: ', rows);
-    });
-  },
-
-  // Добавить задачу
-  add: function (text, callback) {
-    // Сделать
-  },
-
-  // Изменить описание задачи
-  change: function (id, newText, callback) {
-    // Сделать
-  },
-
-  // Отменить задачу как сделанную
-  complete: function (id, callback) {
-    // Сделать
-  },
-
-  // Удаление задачи
-  delete: function (id, callback) {
-    // Сделать
-  }
-};
-
-todoList.list();
-
+//todoList.list();
 module.exports = todoList;

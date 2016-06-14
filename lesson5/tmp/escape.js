@@ -4,7 +4,7 @@ var mysql = require('mysql');
 // Попробуем сломать запрос
 var todoId = '7 OR 1 = 1';
 
-// Созданиепула запросов
+// Создание пула запросов
 var connectionPool = mysql.createPool({
   host:     'localhost',
   user:     'user2',

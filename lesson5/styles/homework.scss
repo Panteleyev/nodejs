@@ -1,0 +1,83 @@
+$bg0: lavender;
+$bg1: lavenderblush;
+$grey0: lightgrey;
+$grey1: darkgrey;
+$txtColor0: cornflowerblue;
+$liTxtColor0: lightblue;
+$dateTxtColor: sandybrown;
+
+body, html {
+  margin:           0;
+  background-color: $grey0;
+  font-size:        14px;
+}
+
+.news-block {
+  background-color: $bg0;
+  color:            $txtColor0;
+  padding:          5px 5px;
+
+  fieldset {
+    border:        5px solid white;
+    margin-bottom: 10px;
+
+    select, input, .btn {
+      border:           none;
+      background-color: $grey0;
+      color:            $txtColor0;
+      outline:          none;
+    }
+
+    .add {
+      background-color: darkseagreen;
+    }
+
+    input[type=submit], .btn {
+      float:  right;
+      cursor: pointer;
+      border: 1px solid $grey0;
+    }
+
+    input[type=submit]:active {
+      background-color: white;
+      border:           1px solid $txtColor0;
+    }
+
+    input[type=text] {
+      color:            $liTxtColor0;
+      font-weight:      bold;
+      background-color: $bg1;
+      padding:          5px;
+    }
+  }
+
+  div {
+    border-top: 4px dotted ghostwhite;
+
+    .todo-list li {
+      background-color: $bg1;
+      color:            $liTxtColor0;
+      font-weight:      bold;
+      padding:          2px;
+      border-bottom:    1px dashed darkseagreen;
+      max-width:        95%;
+
+      .btn {
+        float: right;
+        color: white;
+      }
+
+      .change {
+        background-color: cornflowerblue;
+      }
+
+      .complete {
+        background-color: darkseagreen;
+      }
+
+      .delete {
+        background-color: crimson;
+      }
+    }
+  }
+}
