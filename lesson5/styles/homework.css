@@ -16,6 +16,7 @@ body, html {
       color: cornflowerblue;
       outline: none; }
     .news-block fieldset .add {
+      color: black;
       background-color: darkseagreen; }
     .news-block fieldset input[type=submit], .news-block fieldset .btn {
       float: right;

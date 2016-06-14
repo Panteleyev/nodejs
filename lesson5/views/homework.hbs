@@ -14,9 +14,9 @@
       {{#each todo_list}}
       <li>
         <input type="text" id="title{{this.id}}" name="title" placeholder="Type title please..." value="{{this.text}}" maxlength="255" />
-        {{this.completed}}
+        {{#if_eq this.completed 'true'}}completed{{else}}no completed{{/if_eq}}
         <input type="button" class="btn delete" onClick="sendQuery({{this.id}}, 'delete')" value="X" />
-        <input type="button" class="btn complete" onClick="sendQuery({{this.id}}, 'complete')" value="Complete" />
+        {{#if_eq this.completed 'false'}}<input type="button" class="btn complete" onClick="sendQuery({{this.id}}, 'complete')" value="Complete" />{{/if_eq}}
         <input type="button" class="btn change" onClick="sendQuery({{this.id}}, 'change')" value="Change" />
       </li>
       {{/each}}
@@ -31,7 +31,7 @@
         <label for="status">Completed:</label> <input type="checkbox" name="status" id="status" />
         <input type="hidden" name="command" value="add" />
       </p>
-      <input type="submit" class="add" value="[ Add ]">
+      <input type="submit" class="add" value=" + ">
     </fieldset>
   </form>
   <form id="controlTask" action="." method="post">

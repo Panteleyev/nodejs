@@ -12,7 +12,6 @@ var config         = require('./config'),
           connection.query(query, function (err, rows) {
             if (err) throw err;
 
-//            console.log('rows is: ', rows);
             callback(rows);
             connection.release();
           });
@@ -25,13 +24,6 @@ var config         = require('./config'),
           'SELECT * FROM todos ORDER BY ??',
           ['id'],
           callback
-//          function (err, rows) {
-//            if (err) {
-//              throw err;
-//            }
-//
-//            console.log('rows: ', rows);
-//          }
         );
       },
 

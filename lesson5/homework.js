@@ -1,5 +1,6 @@
 var express     = require('express'),
-    template    = require('consolidate').handlebars,
+    consolidate = require('consolidate'),
+    handlebars  = require('handlebars'),
     bodyParser  = require('body-parser'),
     controlTodo = require('./todolist'),
     app         = express(),
@@ -11,7 +12,17 @@ var express     = require('express'),
       console.log('Server was running on\nhost: ', host, '\nport: ', port);
     });
 
-app.engine('hbs', template);
+consolidate.requires.handlebars = handlebars;
+
+handlebars.registerHelper('if_eq', function (a, b, opts) {
+  if (a == b) {
+    return opts.fn(this);
+  } else {
+    return opts.inverse(this);
+  }
+});
+
+app.engine('hbs', consolidate.handlebars);
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/'));
@@ -20,12 +31,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 //app.use(cookieParser());
 
 app.post('/', function (req, res) {
-  var command = req.body.command;
-
-  console.log('command: ' + command);
-  console.log(req.body);
-
-  var status, title, id;
+  var command = req.body.command,
+      status, title, id;
 
   if (command == 'add') {
     status = (req.body.status === undefined) ? 'false' : 'true';
@@ -58,8 +65,6 @@ app.get('/', function (req, res) {
 
 function getList(res) {
   controlTodo.list(function (data) {
-    console.log(data);
-
     res.render('homework', {
       todo_list: data
     });
