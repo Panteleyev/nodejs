@@ -3,42 +3,42 @@ body, html {
   background-color: lightgrey;
   font: normal 14px Arial; }
 
-.news-block {
+.todo-block {
   background-color: lavender;
   color: cornflowerblue;
   padding: 5px 5px; }
-  .news-block fieldset {
+  .todo-block fieldset {
     border: 5px solid white;
     margin-bottom: 10px; }
-    .news-block fieldset .add {
+    .todo-block fieldset .add {
       background-color: darkseagreen; }
-    .news-block fieldset input[type=text] {
+    .todo-block fieldset input[type=text] {
       font-weight: bold;
       padding: 5px; }
-  .news-block div {
+  .todo-block div {
     border-top: 4px dotted ghostwhite; }
-    .news-block div .todo-list li {
+    .todo-block div .todo-list li {
       background-color: lavenderblush;
       color: lightblue;
       font-weight: bold;
       padding: 2px;
       border-bottom: 1px dashed lavender;
       max-width: 95%; }
-      .news-block div .todo-list li input[type=text] {
+      .todo-block div .todo-list li input[type=text] {
         border: 1px solid lightgrey; }
-      .news-block div .todo-list li .change {
+      .todo-block div .todo-list li .change {
         background-color: cornflowerblue; }
-      .news-block div .todo-list li .complete {
+      .todo-block div .todo-list li .complete {
         background-color: darkseagreen; }
-      .news-block div .todo-list li .delete {
+      .todo-block div .todo-list li .delete {
         background-color: crimson; }
-  .news-block input {
+  .todo-block input {
     outline: none; }
-  .news-block .btn {
+  .todo-block .btn {
     color: white;
     cursor: pointer;
     float: right; }
-  .news-block input[type=text] {
+  .todo-block input[type=text] {
     color: lightblue;
     border: 1px solid lightgrey;
     font-weight: bold;
