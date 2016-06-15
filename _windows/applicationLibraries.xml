@@ -441,6 +441,17 @@
       </DOCUMENTATION>
       <SOURCES />
     </library>
+    <library name="load" type="javaScript">
+      <properties>
+        <sourceFilesUrls>
+          <item url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_loader.topadvert.ru_load.js" />
+        </sourceFilesUrls>
+      </properties>
+      <CLASSES>
+        <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_loader.topadvert.ru_load.js" />
+      </CLASSES>
+      <SOURCES />
+    </library>
     <library name="minimist-DefinitelyTyped" type="javaScript">
       <properties>
         <sourceFilesUrls>
@@ -517,6 +528,17 @@
       </properties>
       <CLASSES>
         <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_sugar_sugar.d.ts" />
+      </CLASSES>
+      <SOURCES />
+    </library>
+    <library name="watch" type="javaScript">
+      <properties>
+        <sourceFilesUrls>
+          <item url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_mc.yandex.ru_metrika_watch.js" />
+        </sourceFilesUrls>
+      </properties>
+      <CLASSES>
+        <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_mc.yandex.ru_metrika_watch.js" />
       </CLASSES>
       <SOURCES />
     </library>
