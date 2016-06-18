@@ -15,6 +15,7 @@
   <option name="HTML_KEEP_LINE_BREAKS_IN_TEXT" value="false" />
   <option name="HTML_SPACE_INSIDE_EMPTY_TAG" value="true" />
   <option name="HTML_ELEMENTS_TO_INSERT_NEW_LINE_BEFORE" value="body,p,form,h1,h2,h3" />
+  <option name="HTML_INLINE_ELEMENTS" value="abbr,acronym,b,basefont,bdo,big,br,cite,cite,code,dfn,em,font,i,input,kbd,label,q,s,samp,select,span,strike,strong,sub,sup,textarea,tt,u,var" />
   <CssCodeStyleSettings>
     <option name="VALUE_ALIGNMENT" value="2" />
     <option name="KEEP_SINGLE_LINE_BLOCKS" value="true" />
