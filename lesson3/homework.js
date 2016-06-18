@@ -1,8 +1,32 @@
-var language = process.argv[2],
-    request  = require('request'),
-    cheerio  = require('cheerio'),
-    jpURI    = 'http://news.panasonic.com/jp/press/',
-    enURI    = 'http://news.panasonic.com/global/press/';
+'use strict';
+
+/**
+ * Программа для получения информации о последних новостях с сайта
+ * [プレスリリース | Panasonic Newsroom Japan](http://news.panasonic.com/jp/press/) в структурированном виде
+ * с возможностью выбора языка. Поддерживаемые языки: японский, английский и русский (автоматический перевод через
+ * сервис «API Яндекс.Переводчик»). Для выбора языка нужно в качестве аргумента указать одно из следующих значений:
+ *
+ *   - japanese
+ *   - english
+ *   - russian
+ *
+ *  Если не указать аргумент, то принимается по умолчанию 'japanese'. Регистр не учитывается.
+ *   Если указать иное значение аргумента - выводится сообщение об ошибке и выполнение программы прекращается.
+ *
+ *  Варианты запуска:
+ *
+ *   - node homework.js
+ *   - node homework.js unknown argument
+ *   - node homework.js JAPANese
+ *   - node homework.js english
+ *   - node homework.js RUSsiAn
+ */
+
+var language  = process.argv[2],
+    translate = require('./translate'),
+    cheerio   = require('cheerio'),
+    jpURI     = 'http://news.panasonic.com/jp/press/',
+    enURI     = 'http://news.panasonic.com/global/press/';
 
 if (language === undefined || language.toLowerCase() == 'japanese') {
   getNews(jpURI, false);
@@ -21,7 +45,7 @@ if (language === undefined || language.toLowerCase() == 'japanese') {
  * @param toTranslate {boolean} перевести текст? true - да, false - нет
  */
 function getNews(url, toTranslate) {
-  request(url, function (error, response, html) {
+  translate.request(url, function (error, response, html) {
     if (error) {
       throw error;
     }
@@ -63,31 +87,5 @@ function getNews(url, toTranslate) {
     } else {
       console.log(result);
     }
-  });
-}
-
-/**
- * Перевод текста с английского на русский через «API Яндекс.Переводчик»
- *
- * @param txt {String} текст на английском
- */
-function translate(txt) {
-  var queryString = require('querystring');
-
-// Кодируем данные в формат form-urlencoded
-  var getData = queryString.stringify({
-    text: txt
-  });
-
-  request('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20160611T230327Z.a962e3dd7f6a597c.911984a061c26a032ac78d0be12bb7f7571ac80a&lang=en-ru&' + getData, function (error, response, answer) {
-    if (error) {
-      throw error;
-    }
-
-    if (response.statusCode !== 200) {
-      return console.log('incorrect statusCode: ', response.statusCode);
-    }
-
-    console.log(JSON.parse(answer).text[0]);
   });
 }

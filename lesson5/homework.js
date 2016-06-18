@@ -1,3 +1,14 @@
+'use strict';
+
+/**
+ * ToDo List. Программа манипулирования заданиями с возможностью изменения статуса выполнения (выполнено/ не выполнено).
+ *
+ * Формат запуска:
+ *
+ * nodemon homework.js
+ *
+ */
+
 var express     = require('express'),
     consolidate = require('consolidate'),
     handlebars  = require('handlebars'),

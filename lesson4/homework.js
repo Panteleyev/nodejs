@@ -1,8 +1,30 @@
-var express      = require('express'),
+'use strict';
+
+/**
+ * Веб-сервис с HTML-интерфейсом на японском языке для динамической загрузки новостей с одного выбранного из нескольких
+ * сайтов. В форме имеется возможность выбора сайта, указания количества выводимых новостей. Кнопка отправки расположена
+ * в правой части формы. Веб-сервис использует cookie для запоминания текущих настроек. Если нет данных в cookie,
+ * то применяются настройки по умолчанию.
+ * Формат запуска:
+ *
+ * nodemon homework.js
+ *
+ * URL веб-сервиса:
+ *
+ * http://localhost:8000/
+ *
+ */
+
+var lib          = require('./resources/lib'),
+    serverLib    = require('./resources/server-lib'),
+    express      = require('express'),
     template     = require('consolidate').handlebars,
     bodyParser   = require('body-parser'),
     app          = express(),
     cookieParser = require('cookie-parser'),
+    request      = require('request'),
+    cheerio      = require('cheerio'),
+
     PORT         = 8000,
     sites        = [
       {
@@ -84,52 +106,23 @@ app.post('/', function (req, res) {
  * Загрузка данных и перерисовка
  *
  * @param data {*[]}
- * @param newsCount {number}
+ * @param newsCount
  * @param res
  */
 function reDraw(data, newsCount, res) {
   getNews(data[2], data[3], newsCount, function (result) {
     var now = new Date();
 
-    now = now.getFullYear() + '.' + pad(now.getMonth(), 99) + '.' + pad(now.getDate(), 99) + ' ' + pad(now.getHours(), 99) + ':' + pad(now.getMinutes(), 99);
+    now = now.getFullYear() + '.' + lib.pad(now.getMonth(), 99) + '.' + lib.pad(now.getDate(), 99) + ' ' + lib.pad(now.getHours(), 99) + ':' + lib.pad(now.getMinutes(), 99);
 
     res.render('homework', {
       title:     data[0],
       options:   data[1],
       now:       now,
-      countNews: pad(newsCount, 99),
+      countNews: lib.pad(newsCount, 99),
       news:      result
     });
   });
-}
-
-/**
- * Convert to UTF8
- *
- * @param charset {string}
- * @param html {String}
- * @returns {string}
- */
-function convert(charset, html) {
-  //TODO(Panteleev): Проблема с поддержкой shift_jis. Разобраться с установкой модуля iconv
-  var iconvLite = require('iconv-lite'), //TODO(Panteleev): применить модуль iconv
-      htmlTmp   = '';
-
-  /*
-   //TODO(Panteleev): Разобраться с модулью iconv-js
-   var iconv     = require('iconv-js'),
-   htmlTmp = iconv.fromSJIS(new Buffer(html, 'binary'));
-   */
-
-  htmlTmp = iconvLite.encode(
-    iconvLite.decode(
-      new Buffer(html, 'binary'),
-      charset
-    ),
-    'utf8'
-  );
-
-  return htmlTmp;
 }
 
 /**
@@ -141,12 +134,9 @@ function convert(charset, html) {
  * @param callback(Function)
  */
 function getNews(url, charset, newsCount, callback) {
-  var request = require('request'),
-      cheerio = require('cheerio');
-
   request(url, function (error, response, html) {
     if (error) {
-//      throw error;
+      //      throw error;
       callback([{date: '', title: 'Error: ' + error}]);
     } else if (response.statusCode !== 200) {
       callback([{date: '', title: 'Incorrect statusCode: ' + response.statusCode}]);
@@ -156,7 +146,7 @@ function getNews(url, charset, newsCount, callback) {
       if (charset == 'auto') {
         $ = cheerio.load(html);
       } else {
-        $ = cheerio.load(convert(charset, html));
+        $ = cheerio.load(serverLib.convert(charset, html));
       }
 
       var dates, titles;
@@ -210,24 +200,9 @@ function parseData($, path, maxCount) {
 }
 
 /**
- * Дополняет число нулями слева, учитывая максимальное число. Используется при выводе нумерованного списка
- *
- * @param number {number} число
- * @param maxNumber {number} максимальное число
- * @returns {string}
- * @private
- */
-function pad(number, maxNumber) {
-  var result = number + '',
-      length = (maxNumber + '').length;
-  while (result.length < length) result = '0' + result;
-  return result;
-}
-
-/**
  * Геттер HTML опций
  *
- * @param siteNameSelected {String}
+ * @param siteNameSelected
  * @returns {*[]}
  */
 function getInfo(siteNameSelected) {

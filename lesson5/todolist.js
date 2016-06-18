@@ -42,7 +42,7 @@ var config         = require('./config'),
       /**
        * Добавление новой задачи
        *
-       * @param data {string} - описание задачи
+       * @param data {{title: string, status: string}} - описание задачи
        * @param callback
        */
       add: function (data, callback) {
@@ -62,7 +62,7 @@ var config         = require('./config'),
        * Изменение описания выбранной задачи
        *
        * @param id {number} - выбранная задача
-       * @param data {string} - отредактированное описание задачи
+       * @param data {{title: string, status: string}} - отредактированное описание задачи
        * @param callback
        */
       change: function (id, data, callback) {

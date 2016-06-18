@@ -1,6 +1,16 @@
+'use strict';
+
+/**
+ * Консольная программа, которая выводит в консоль разными цветами и издавать звук(и) с помощью модуля Colors.
+ *
+ * Формат запуска:
+ *
+ * node index.js
+ */
+
 // Подключение модулей. Вызов встроенных методов
 
-var outSweetModule = require('./module.js');
+var outSweetModule = require('./tmp/module.js');
 outSweetModule.sayYes();
 
 var ansi      = require('ansi');
