@@ -1,9 +1,0 @@
-<application>
-  <component name="FileTypeManager" version="17">
-    <extensionMap>
-      <mapping ext="hbs" type="HTML" />
-      <removed_mapping ext="hbs" type="Handlebars/Mustache" />
-      <mapping ext="xz" type="PLAIN_TEXT" />
-    </extensionMap>
-  </component>
-</application>
