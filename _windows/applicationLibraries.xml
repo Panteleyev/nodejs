@@ -289,6 +289,17 @@
       </CLASSES>
       <SOURCES />
     </library>
+    <library name="fullpage.js-DefinitelyTyped" type="javaScript">
+      <properties>
+        <sourceFilesUrls>
+          <item url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_fullpage.js_fullpage.js.d.ts" />
+        </sourceFilesUrls>
+      </properties>
+      <CLASSES>
+        <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_github.com_DefinitelyTyped_DefinitelyTyped_raw_master_fullpage.js_fullpage.js.d.ts" />
+      </CLASSES>
+      <SOURCES />
+    </library>
     <library name="handlebars-DefinitelyTyped" type="javaScript">
       <properties>
         <sourceFilesUrls>
