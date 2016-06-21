@@ -370,5 +370,16 @@
       </CLASSES>
       <SOURCES />
     </library>
+    <library name="touch-swipe" type="javaScript">
+      <properties>
+        <sourceFilesUrls>
+          <item url="file://C:/www/mobiltelefon.ru/www/other_pages/i/mod/TouchSwipe-Jquery-Plugin/jquery.touchSwipe.js" />
+        </sourceFilesUrls>
+      </properties>
+      <CLASSES>
+        <root url="file://C:/www/mobiltelefon.ru/www/other_pages/i/mod/TouchSwipe-Jquery-Plugin/jquery.touchSwipe.js" />
+      </CLASSES>
+      <SOURCES />
+    </library>
   </component>
 </application>
