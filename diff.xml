@@ -43,6 +43,7 @@
       <entry key="Default">
         <PlaceSettings>
           <option name="HIGHLIGHT_POLICY" value="BY_LINE" />
+          <option name="IGNORE_POLICY" value="IGNORE_WHITESPACES_CHUNKS" />
           <option name="EXPAND_BY_DEFAULT" value="false" />
         </PlaceSettings>
       </entry>
