@@ -1,0 +1,453 @@
+<application>
+  <component name="MessDetector">
+    <phpmd_settings>
+      <MessDetectorConfiguration />
+    </phpmd_settings>
+  </component>
+  <component name="PhpCodeSniffer">
+    <phpcs_settings>
+      <PhpCSConfiguration />
+    </phpcs_settings>
+  </component>
+  <component name="PhpInterpreters">
+    <interpreters>
+      <interpreter home="C:\Program Files (x86)\Zend\ZendServer\bin\php.exe" id="3934fab2-b567-4a76-b33b-a34ec92ae1aa" name="ZendServer PHP 5.3" debugger_id="php.debugger.ZendDebugger" />
+    </interpreters>
+  </component>
+  <component name="PhpInterpretersPhpInfoCache">
+    <phpInfoCache>
+      <interpreter name="ZendServer PHP 5.3">
+        <phpinfo binary_type="PHP" php_cli="" path_separator=";" remote_host="127.0.0.1" version="5.3.9-ZS5.6.0">
+          <additional_php_ini />
+          <configuration_file>C:\Program Files (x86)\Zend\ZendServer\etc\php.ini</configuration_file>
+          <configuration_options>
+            <configuration_option name="SMTP" value="localhost" />
+            <configuration_option name="allow_call_time_pass_reference" value="" />
+            <configuration_option name="allow_url_fopen" value="1" />
+            <configuration_option name="allow_url_include" value="0" />
+            <configuration_option name="always_populate_raw_post_data" value="0" />
+            <configuration_option name="arg_separator.input" value="&amp;" />
+            <configuration_option name="arg_separator.output" value="&amp;" />
+            <configuration_option name="asp_tags" value="" />
+            <configuration_option name="assert.active" value="1" />
+            <configuration_option name="assert.bail" value="0" />
+            <configuration_option name="assert.callback" value="" />
+            <configuration_option name="assert.quiet_eval" value="0" />
+            <configuration_option name="assert.warning" value="1" />
+            <configuration_option name="auto_append_file" value="" />
+            <configuration_option name="auto_detect_line_endings" value="0" />
+            <configuration_option name="auto_globals_jit" value="1" />
+            <configuration_option name="auto_prepend_file" value="" />
+            <configuration_option name="bcmath.scale" value="0" />
+            <configuration_option name="browscap" value="" />
+            <configuration_option name="com.allow_dcom" value="0" />
+            <configuration_option name="com.autoregister_casesensitive" value="1" />
+            <configuration_option name="com.autoregister_typelib" value="0" />
+            <configuration_option name="com.autoregister_verbose" value="0" />
+            <configuration_option name="com.code_page" value="" />
+            <configuration_option name="com.typelib_file" value="" />
+            <configuration_option name="curl.cainfo" value="" />
+            <configuration_option name="date.default_latitude" value="31.7667" />
+            <configuration_option name="date.default_longitude" value="35.2333" />
+            <configuration_option name="date.sunrise_zenith" value="90.583333" />
+            <configuration_option name="date.sunset_zenith" value="90.583333" />
+            <configuration_option name="date.timezone" value="Europe/Moscow" />
+            <configuration_option name="default_charset" value="" />
+            <configuration_option name="default_mimetype" value="text/html" />
+            <configuration_option name="default_socket_timeout" value="60" />
+            <configuration_option name="define_syslog_variables" value="" />
+            <configuration_option name="disable_classes" value="" />
+            <configuration_option name="disable_functions" value="" />
+            <configuration_option name="display_errors" value="" />
+            <configuration_option name="display_startup_errors" value="" />
+            <configuration_option name="doc_root" value="" />
+            <configuration_option name="docref_ext" value="" />
+            <configuration_option name="docref_root" value="" />
+            <configuration_option name="enable_dl" value="1" />
+            <configuration_option name="error_append_string" value="" />
+            <configuration_option name="error_log" value="C:\Program Files (x86)\Zend\ZendServer\logs\php_error.log" />
+            <configuration_option name="error_prepend_string" value="" />
+            <configuration_option name="error_reporting" value="30719" />
+            <configuration_option name="exif.decode_jis_intel" value="JIS" />
+            <configuration_option name="exif.decode_jis_motorola" value="JIS" />
+            <configuration_option name="exif.decode_unicode_intel" value="UCS-2LE" />
+            <configuration_option name="exif.decode_unicode_motorola" value="UCS-2BE" />
+            <configuration_option name="exif.encode_jis" value="" />
+            <configuration_option name="exif.encode_unicode" value="ISO-8859-15" />
+            <configuration_option name="exit_on_timeout" value="0" />
+            <configuration_option name="expose_php" value="1" />
+            <configuration_option name="extension_dir" value="C:\Program Files (x86)\Zend\ZendServer\lib\phpext" />
+            <configuration_option name="file_uploads" value="1" />
+            <configuration_option name="filter.default" value="unsafe_raw" />
+            <configuration_option name="filter.default_flags" value="" />
+            <configuration_option name="from" value="" />
+            <configuration_option name="gd.jpeg_ignore_warning" value="0" />
+            <configuration_option name="highlight.bg" value="#FFFFFF" />
+            <configuration_option name="highlight.comment" value="#FF8000" />
+            <configuration_option name="highlight.default" value="#0000BB" />
+            <configuration_option name="highlight.html" value="#000000" />
+            <configuration_option name="highlight.keyword" value="#007700" />
+            <configuration_option name="highlight.string" value="#DD0000" />
+            <configuration_option name="html_errors" value="0" />
+            <configuration_option name="iconv.input_encoding" value="ISO-8859-1" />
+            <configuration_option name="iconv.internal_encoding" value="ISO-8859-1" />
+            <configuration_option name="iconv.output_encoding" value="ISO-8859-1" />
+            <configuration_option name="ignore_repeated_errors" value="" />
+            <configuration_option name="ignore_repeated_source" value="" />
+            <configuration_option name="ignore_user_abort" value="0" />
+            <configuration_option name="implicit_flush" value="1" />
+            <configuration_option name="include_path" value=".;C:\Program Files (x86)\Zend\ZendServer\share\ZendFramework\library" />
+            <configuration_option name="intl.default_locale" value="" />
+            <configuration_option name="intl.error_level" value="0" />
+            <configuration_option name="ldap.max_links" value="-1" />
+            <configuration_option name="log_errors" value="1" />
+            <configuration_option name="log_errors_max_len" value="1024" />
+            <configuration_option name="magic_quotes_gpc" value="" />
+            <configuration_option name="magic_quotes_runtime" value="" />
+            <configuration_option name="magic_quotes_sybase" value="0" />
+            <configuration_option name="mail.add_x_header" value="0" />
+            <configuration_option name="mail.force_extra_parameters" value="" />
+            <configuration_option name="mail.log" value="" />
+            <configuration_option name="max_execution_time" value="0" />
+            <configuration_option name="max_file_uploads" value="20" />
+            <configuration_option name="max_input_nesting_level" value="64" />
+            <configuration_option name="max_input_time" value="-1" />
+            <configuration_option name="max_input_vars" value="1000" />
+            <configuration_option name="mbstring.detect_order" value="" />
+            <configuration_option name="mbstring.encoding_translation" value="0" />
+            <configuration_option name="mbstring.func_overload" value="0" />
+            <configuration_option name="mbstring.http_input" value="pass" />
+            <configuration_option name="mbstring.http_output" value="pass" />
+            <configuration_option name="mbstring.http_output_conv_mimetypes" value="^(text/|application/xhtml\+xml)" />
+            <configuration_option name="mbstring.internal_encoding" value="" />
+            <configuration_option name="mbstring.language" value="neutral" />
+            <configuration_option name="mbstring.strict_detection" value="0" />
+            <configuration_option name="mbstring.substitute_character" value="" />
+            <configuration_option name="mcrypt.algorithms_dir" value="" />
+            <configuration_option name="mcrypt.modes_dir" value="" />
+            <configuration_option name="memory_limit" value="128M" />
+            <configuration_option name="mysql.allow_local_infile" value="1" />
+            <configuration_option name="mysql.allow_persistent" value="1" />
+            <configuration_option name="mysql.connect_timeout" value="60" />
+            <configuration_option name="mysql.default_host" value="" />
+            <configuration_option name="mysql.default_password" value="" />
+            <configuration_option name="mysql.default_port" value="" />
+            <configuration_option name="mysql.default_socket" value="" />
+            <configuration_option name="mysql.default_user" value="" />
+            <configuration_option name="mysql.max_links" value="-1" />
+            <configuration_option name="mysql.max_persistent" value="-1" />
+            <configuration_option name="mysql.trace_mode" value="" />
+            <configuration_option name="mysqli.allow_local_infile" value="1" />
+            <configuration_option name="mysqli.allow_persistent" value="1" />
+            <configuration_option name="mysqli.default_host" value="" />
+            <configuration_option name="mysqli.default_port" value="3306" />
+            <configuration_option name="mysqli.default_pw" value="" />
+            <configuration_option name="mysqli.default_socket" value="" />
+            <configuration_option name="mysqli.default_user" value="" />
+            <configuration_option name="mysqli.max_links" value="-1" />
+            <configuration_option name="mysqli.max_persistent" value="-1" />
+            <configuration_option name="mysqli.reconnect" value="" />
+            <configuration_option name="mysqlnd.collect_memory_statistics" value="0" />
+            <configuration_option name="mysqlnd.collect_statistics" value="1" />
+            <configuration_option name="mysqlnd.debug" value="" />
+            <configuration_option name="mysqlnd.debug_calloc_fail_threshold" value="-1" />
+            <configuration_option name="mysqlnd.debug_ecalloc_fail_threshold" value="-1" />
+            <configuration_option name="mysqlnd.debug_emalloc_fail_threshold" value="-1" />
+            <configuration_option name="mysqlnd.debug_erealloc_fail_threshold" value="-1" />
+            <configuration_option name="mysqlnd.debug_malloc_fail_threshold" value="-1" />
+            <configuration_option name="mysqlnd.debug_realloc_fail_threshold" value="-1" />
+            <configuration_option name="mysqlnd.log_mask" value="0" />
+            <configuration_option name="mysqlnd.mempool_default_size" value="16000" />
+            <configuration_option name="mysqlnd.net_cmd_buffer_size" value="4096" />
+            <configuration_option name="mysqlnd.net_read_buffer_size" value="32768" />
+            <configuration_option name="mysqlnd.net_read_timeout" value="31536000" />
+            <configuration_option name="open_basedir" value="" />
+            <configuration_option name="output_buffering" value="0" />
+            <configuration_option name="output_handler" value="" />
+            <configuration_option name="pcre.backtrack_limit" value="1000000" />
+            <configuration_option name="pcre.recursion_limit" value="100000" />
+            <configuration_option name="pgsql.allow_persistent" value="1" />
+            <configuration_option name="pgsql.auto_reset_persistent" value="" />
+            <configuration_option name="pgsql.ignore_notice" value="0" />
+            <configuration_option name="pgsql.log_notice" value="0" />
+            <configuration_option name="pgsql.max_links" value="-1" />
+            <configuration_option name="pgsql.max_persistent" value="-1" />
+            <configuration_option name="phar.cache_list" value="" />
+            <configuration_option name="phar.readonly" value="1" />
+            <configuration_option name="phar.require_hash" value="1" />
+            <configuration_option name="post_max_size" value="100M" />
+            <configuration_option name="precision" value="14" />
+            <configuration_option name="realpath_cache_size" value="256k" />
+            <configuration_option name="realpath_cache_ttl" value="120" />
+            <configuration_option name="register_argc_argv" value="1" />
+            <configuration_option name="register_globals" value="" />
+            <configuration_option name="register_long_arrays" value="" />
+            <configuration_option name="report_memleaks" value="1" />
+            <configuration_option name="report_zend_debug" value="0" />
+            <configuration_option name="request_order" value="" />
+            <configuration_option name="safe_mode" value="" />
+            <configuration_option name="safe_mode_allowed_env_vars" value="PHP_" />
+            <configuration_option name="safe_mode_exec_dir" value="" />
+            <configuration_option name="safe_mode_gid" value="" />
+            <configuration_option name="safe_mode_include_dir" value="" />
+            <configuration_option name="safe_mode_protected_env_vars" value="LD_LIBRARY_PATH" />
+            <configuration_option name="sendmail_from" value="" />
+            <configuration_option name="sendmail_path" value="" />
+            <configuration_option name="serialize_precision" value="100" />
+            <configuration_option name="session.auto_start" value="0" />
+            <configuration_option name="session.bug_compat_42" value="0" />
+            <configuration_option name="session.bug_compat_warn" value="1" />
+            <configuration_option name="session.cache_expire" value="180" />
+            <configuration_option name="session.cache_limiter" value="nocache" />
+            <configuration_option name="session.cookie_domain" value="" />
+            <configuration_option name="session.cookie_httponly" value="" />
+            <configuration_option name="session.cookie_lifetime" value="0" />
+            <configuration_option name="session.cookie_path" value="/" />
+            <configuration_option name="session.cookie_secure" value="" />
+            <configuration_option name="session.entropy_file" value="" />
+            <configuration_option name="session.entropy_length" value="0" />
+            <configuration_option name="session.gc_divisor" value="1000" />
+            <configuration_option name="session.gc_maxlifetime" value="1440" />
+            <configuration_option name="session.gc_probability" value="1" />
+            <configuration_option name="session.hash_bits_per_character" value="5" />
+            <configuration_option name="session.hash_function" value="0" />
+            <configuration_option name="session.name" value="PHPSESSID" />
+            <configuration_option name="session.referer_check" value="" />
+            <configuration_option name="session.save_handler" value="files" />
+            <configuration_option name="session.save_path" value="" />
+            <configuration_option name="session.serialize_handler" value="php" />
+            <configuration_option name="session.use_cookies" value="1" />
+            <configuration_option name="session.use_only_cookies" value="1" />
+            <configuration_option name="session.use_trans_sid" value="0" />
+            <configuration_option name="short_open_tag" value="1" />
+            <configuration_option name="smtp_port" value="25" />
+            <configuration_option name="soap.wsdl_cache" value="1" />
+            <configuration_option name="soap.wsdl_cache_dir" value="C:\Program Files (x86)\Zend\ZendServer\tmp" />
+            <configuration_option name="soap.wsdl_cache_enabled" value="1" />
+            <configuration_option name="soap.wsdl_cache_limit" value="5" />
+            <configuration_option name="soap.wsdl_cache_ttl" value="86400" />
+            <configuration_option name="sql.safe_mode" value="" />
+            <configuration_option name="sqlite.assoc_case" value="0" />
+            <configuration_option name="sqlite3.extension_dir" value="" />
+            <configuration_option name="tidy.clean_output" value="" />
+            <configuration_option name="tidy.default_config" value="" />
+            <configuration_option name="track_errors" value="" />
+            <configuration_option name="unserialize_callback_func" value="" />
+            <configuration_option name="upload_max_filesize" value="100M" />
+            <configuration_option name="upload_tmp_dir" value="" />
+            <configuration_option name="url_rewriter.tags" value="a=href,area=href,frame=src,input=src,form=fakeentry" />
+            <configuration_option name="user_agent" value="" />
+            <configuration_option name="user_dir" value="" />
+            <configuration_option name="user_ini.cache_ttl" value="300" />
+            <configuration_option name="user_ini.filename" value=".user.ini" />
+            <configuration_option name="variables_order" value="GPCS" />
+            <configuration_option name="windows.show_crt_warning" value="0" />
+            <configuration_option name="xmlrpc_error_number" value="0" />
+            <configuration_option name="xmlrpc_errors" value="0" />
+            <configuration_option name="xsl.security_prefs" value="44" />
+            <configuration_option name="y2k_compliance" value="1" />
+            <configuration_option name="zend.enable_gc" value="1" />
+            <configuration_option name="zend_codetracing.always_dump" value="0" />
+            <configuration_option name="zend_codetracing.buffer_size" value="1M" />
+            <configuration_option name="zend_codetracing.dump_file" value="codetracing/dump" />
+            <configuration_option name="zend_codetracing.dump_format" value="2" />
+            <configuration_option name="zend_codetracing.dump_on_segv" value="1" />
+            <configuration_option name="zend_codetracing.enable" value="1" />
+            <configuration_option name="zend_codetracing.log_file" value="codetracing.log" />
+            <configuration_option name="zend_codetracing.log_rotation_size" value="10" />
+            <configuration_option name="zend_codetracing.log_verbosity" value="0" />
+            <configuration_option name="zend_codetracing.max_concurrent_trace_buffers" value="5" />
+            <configuration_option name="zend_codetracing.max_depth" value="2" />
+            <configuration_option name="zend_codetracing.max_elements" value="10" />
+            <configuration_option name="zend_codetracing.max_freq" value="1" />
+            <configuration_option name="zend_codetracing.max_string" value="48" />
+            <configuration_option name="zend_codetracing.override_functions" value="@C:\Program Files (x86)\Zend\ZendServer\etc\functions.txt" />
+            <configuration_option name="zend_codetracing.trace_arguments" value="1" />
+            <configuration_option name="zend_codetracing.trace_arrays" value="1" />
+            <configuration_option name="zend_codetracing.trace_enable" value="0" />
+            <configuration_option name="zend_codetracing.trace_errors" value="1" />
+            <configuration_option name="zend_codetracing.trace_events" value="1" />
+            <configuration_option name="zend_codetracing.trace_exceptions" value="1" />
+            <configuration_option name="zend_codetracing.trace_headers" value="1" />
+            <configuration_option name="zend_codetracing.trace_includes" value="1" />
+            <configuration_option name="zend_codetracing.trace_internal_functions" value="1" />
+            <configuration_option name="zend_codetracing.trace_memory_usage" value="1" />
+            <configuration_option name="zend_codetracing.trace_return_values" value="1" />
+            <configuration_option name="zend_codetracing.trace_source_lines" value="1" />
+            <configuration_option name="zend_codetracing.trace_time" value="1" />
+            <configuration_option name="zend_codetracing.trace_user_functions" value="1" />
+            <configuration_option name="zend_codetracing.trace_write" value="1" />
+            <configuration_option name="zend_codetracing.use_fast_timestamp" value="1" />
+            <configuration_option name="zend_datacache.apc_compatibility" value="1" />
+            <configuration_option name="zend_datacache.disk.dir_level" value="2" />
+            <configuration_option name="zend_datacache.disk.save_path" value="C:\Program Files (x86)\Zend\ZendServer\tmp\datacache" />
+            <configuration_option name="zend_datacache.enable" value="1" />
+            <configuration_option name="zend_datacache.lock_on_expire" value="1" />
+            <configuration_option name="zend_datacache.log_rotation_size" value="10" />
+            <configuration_option name="zend_datacache.log_verbosity_level" value="2" />
+            <configuration_option name="zend_datacache.shm.max_num_namespaces" value="0" />
+            <configuration_option name="zend_datacache.shm.memory_cache_size" value="32" />
+            <configuration_option name="zend_datacache.shm.memory_cache_size_kb" value="0" />
+            <configuration_option name="zend_debugger.allow_hosts" value="127.0.0.1/32,10.0.0.0/8,192.168.0.0/16,172.16.0.0/12" />
+            <configuration_option name="zend_debugger.deny_hosts" value="" />
+            <configuration_option name="zend_debugger.enable_coverage" value="0" />
+            <configuration_option name="zend_debugger.expose_remotely" value="2" />
+            <configuration_option name="zend_debugger.httpd_uid" value="-1" />
+            <configuration_option name="zend_debugger.max_msg_size" value="2097152" />
+            <configuration_option name="zend_debugger.tunnel_max_port" value="65535" />
+            <configuration_option name="zend_debugger.tunnel_min_port" value="1024" />
+            <configuration_option name="zend_debugger.use_fast_timestamp" value="1" />
+            <configuration_option name="zend_debugger.xdebug_compatible_coverage" value="0" />
+            <configuration_option name="zend_jbridge.encoding" value="UTF-8" />
+            <configuration_option name="zend_jbridge.ints_are_longs" value="0" />
+            <configuration_option name="zend_jbridge.server_port" value="10001" />
+            <configuration_option name="zend_jbridge.use_java_objects" value="0" />
+            <configuration_option name="zend_jobqueue.daemon_connection_timeout" value="30" />
+            <configuration_option name="zend_jobqueue.default_binding" value="tcp://127.0.0.1:10085" />
+            <configuration_option name="zend_jobqueue.enable" value="1" />
+            <configuration_option name="zend_jobqueue.log_rotation_size" value="10" />
+            <configuration_option name="zend_jobqueue.log_verbosity_level" value="2" />
+            <configuration_option name="zend_loader.disable_licensing" value="0" />
+            <configuration_option name="zend_loader.enable" value="1" />
+            <configuration_option name="zend_loader.max_alloca" value="2048" />
+            <configuration_option name="zend_loader.obfuscation_level_support" value="3" />
+            <configuration_option name="zend_monitor.commands_transport_parameter" value="commands" />
+            <configuration_option name="zend_monitor.database.host_name" value="" />
+            <configuration_option name="zend_monitor.database.name" value="monitor" />
+            <configuration_option name="zend_monitor.database.password" value="" />
+            <configuration_option name="zend_monitor.database.port" value="3306" />
+            <configuration_option name="zend_monitor.database.type" value="SQLITE" />
+            <configuration_option name="zend_monitor.database.user" value="" />
+            <configuration_option name="zend_monitor_ui.enabled" value="1" />
+            <configuration_option name="zend_monitor_ui.events_rules_xml_file_name" value="events_rules.xml" />
+            <configuration_option name="zend_monitor_ui.expiration_days" value="30" />
+            <configuration_option name="zend_monitor_ui.expiration_days_closed" value="20" />
+            <configuration_option name="zend_monitor_ui.log_rotation_size" value="10" />
+            <configuration_option name="zend_monitor_ui.log_verbosity" value="2" />
+            <configuration_option name="zend_optimizerplus.blacklist_filename" value="" />
+            <configuration_option name="zend_optimizerplus.consistency_checks" value="0" />
+            <configuration_option name="zend_optimizerplus.dups_fix" value="0" />
+            <configuration_option name="zend_optimizerplus.enable" value="1" />
+            <configuration_option name="zend_optimizerplus.enable_file_override" value="0" />
+            <configuration_option name="zend_optimizerplus.enable_slow_optimizations" value="1" />
+            <configuration_option name="zend_optimizerplus.fast_shutdown" value="0" />
+            <configuration_option name="zend_optimizerplus.force_restart_timeout" value="180" />
+            <configuration_option name="zend_optimizerplus.inherited_hack" value="1" />
+            <configuration_option name="zend_optimizerplus.log_verbosity_level" value="1" />
+            <configuration_option name="zend_optimizerplus.max_accelerated_files" value="2000" />
+            <configuration_option name="zend_optimizerplus.max_wasted_percentage" value="5" />
+            <configuration_option name="zend_optimizerplus.memory_consumption" value="64" />
+            <configuration_option name="zend_optimizerplus.mmap_base" value="" />
+            <configuration_option name="zend_optimizerplus.optimization_level" value="0xfffffbbf" />
+            <configuration_option name="zend_optimizerplus.preferred_memory_model" value="" />
+            <configuration_option name="zend_optimizerplus.revalidate_freq" value="2" />
+            <configuration_option name="zend_optimizerplus.revalidate_path" value="0" />
+            <configuration_option name="zend_optimizerplus.save_comments" value="1" />
+            <configuration_option name="zend_optimizerplus.use_cwd" value="1" />
+            <configuration_option name="zend_optimizerplus.validate_timestamps" value="1" />
+            <configuration_option name="zend_pagecache.clean_frequency" value="300" />
+            <configuration_option name="zend_pagecache.compression_enable" value="1" />
+            <configuration_option name="zend_pagecache.dependencies_file" value="pagecache_rules.xml" />
+            <configuration_option name="zend_pagecache.dir_depth" value="2" />
+            <configuration_option name="zend_pagecache.enable" value="1" />
+            <configuration_option name="zend_pagecache.enable_qa_info" value="0" />
+            <configuration_option name="zend_pagecache.log_rotation_size" value="10" />
+            <configuration_option name="zend_pagecache.log_verbosity_level" value="2" />
+            <configuration_option name="zend_pagecache.max_cached_rules" value="100" />
+            <configuration_option name="zend_pagecache.save_path" value="C:\Program Files (x86)\Zend\ZendServer\tmp\pagecache" />
+            <configuration_option name="zend_sc.enable" value="0" />
+            <configuration_option name="zend_sc.ha_enabled" value="1" />
+            <configuration_option name="zend_sc.lock_timeout" value="1" />
+            <configuration_option name="zend_sc.log_rotation_size" value="10" />
+            <configuration_option name="zend_sc.log_verbosity_level" value="2" />
+            <configuration_option name="zend_sc.quick_connect_timeout" value="500" />
+            <configuration_option name="zend_sc.scd_port" value="10062" />
+            <configuration_option name="zend_sc.session_compression_enabled" value="0" />
+            <configuration_option name="zend_utils.cleaner_config_file" value="CLEANER_CONFIG_FILE" />
+            <configuration_option name="zend_utils.enable_crash_breaks" value="0" />
+            <configuration_option name="zend_utils.enable_crash_dumps" value="0" />
+            <configuration_option name="zend_utils.log_verbosity_level" value="2" />
+            <configuration_option name="zend_utils.use_graceful_restart" value="0" />
+            <configuration_option name="zlib.output_compression" value="" />
+            <configuration_option name="zlib.output_compression_level" value="-1" />
+            <configuration_option name="zlib.output_handler" value="" />
+          </configuration_options>
+          <debuggers>
+            <debugger_info debugger="Zend Debugger" debugger_version="">
+              <debug_extensions />
+            </debugger_info>
+          </debuggers>
+          <loaded_extensions>
+            <extension name="Core" />
+            <extension name="PDO" />
+            <extension name="Phar" />
+            <extension name="Reflection" />
+            <extension name="SPL" />
+            <extension name="SQLite" />
+            <extension name="SimpleXML" />
+            <extension name="Zend Cluster Utils" />
+            <extension name="Zend Code Tracing" />
+            <extension name="Zend Data Cache" />
+            <extension name="Zend Debugger" />
+            <extension name="Zend Guard Loader" />
+            <extension name="Zend Java Bridge" />
+            <extension name="Zend Job Queue" />
+            <extension name="Zend Monitor UI" />
+            <extension name="Zend Optimizer+" />
+            <extension name="Zend Page Cache" />
+            <extension name="Zend Session Clustering" />
+            <extension name="Zend Utils" />
+            <extension name="apc" />
+            <extension name="bcmath" />
+            <extension name="bz2" />
+            <extension name="calendar" />
+            <extension name="com_dotnet" />
+            <extension name="ctype" />
+            <extension name="curl" />
+            <extension name="date" />
+            <extension name="dom" />
+            <extension name="ereg" />
+            <extension name="exif" />
+            <extension name="fileinfo" />
+            <extension name="filter" />
+            <extension name="ftp" />
+            <extension name="gd" />
+            <extension name="gettext" />
+            <extension name="hash" />
+            <extension name="iconv" />
+            <extension name="imap" />
+            <extension name="intl" />
+            <extension name="json" />
+            <extension name="ldap" />
+            <extension name="libxml" />
+            <extension name="mbstring" />
+            <extension name="mcrypt" />
+            <extension name="mysql" />
+            <extension name="mysqli" />
+            <extension name="mysqlnd" />
+            <extension name="openssl" />
+            <extension name="pcre" />
+            <extension name="pdo_mysql" />
+            <extension name="pdo_pgsql" />
+            <extension name="pdo_sqlite" />
+            <extension name="pgsql" />
+            <extension name="session" />
+            <extension name="soap" />
+            <extension name="sockets" />
+            <extension name="sqlite3" />
+            <extension name="standard" />
+            <extension name="tidy" />
+            <extension name="tokenizer" />
+            <extension name="win32service" />
+            <extension name="xml" />
+            <extension name="xmlreader" />
+            <extension name="xmlwriter" />
+            <extension name="xsl" />
+            <extension name="zip" />
+            <extension name="zlib" />
+          </loaded_extensions>
+        </phpinfo>
+      </interpreter>
+    </phpInfoCache>
+  </component>
+</application>
