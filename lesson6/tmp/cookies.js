@@ -14,9 +14,11 @@ http
       return val.split('=');
     }));
 
+    // Читаем cookie
     var language = cookies.get('language');
     console.log('language is: ', language);
 
+    // Читаем cookie
     var platform = cookies.get('platform');
     console.log('platform is: ', platform);
 
@@ -29,6 +31,9 @@ http
     });
 
     response.end('I know your preferences!');
+
+    // Удаляем cookie через expires в прошлом
+    cookies.set("platform", "NodeJS", {expires: Date.now() - 1});
   })
   .listen(8000, function () {
     console.log('Let\'s get started: 8000');

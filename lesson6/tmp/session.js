@@ -17,9 +17,6 @@ app.get('/', function (req, res) {
   // httpOnly, expires
   var count = req.session.views || 0; // 0 - по-умолчанию
 
-  // время жизни (доп)
-  //  res.cookie('count', count, {maxAge: 36000000});
-
   req.session.views = ++count; // увеличиваем значение и сохраняем в сессию
 
   res.end(count + ' показ(ов)');
