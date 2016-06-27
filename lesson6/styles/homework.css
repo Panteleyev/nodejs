@@ -1,0 +1,47 @@
+body, html {
+  margin: 0;
+  background-color: lightgrey;
+  font: normal 14px Arial; }
+
+.todo-block {
+  background-color: lavender;
+  color: cornflowerblue;
+  padding: 5px 5px; }
+  .todo-block fieldset {
+    border: 5px solid white;
+    margin-bottom: 10px; }
+    .todo-block fieldset .add {
+      background-color: darkseagreen; }
+    .todo-block fieldset input[type=text] {
+      font-weight: bold;
+      padding: 5px; }
+  .todo-block div {
+    border-top: 4px dotted ghostwhite; }
+    .todo-block div .todo-list li {
+      background-color: lavenderblush;
+      color: lightblue;
+      font-weight: bold;
+      padding: 2px;
+      border-bottom: 1px dashed lavender;
+      max-width: 95%; }
+      .todo-block div .todo-list li input[type=text] {
+        border: 1px solid lightgrey; }
+      .todo-block div .todo-list li .change {
+        background-color: cornflowerblue; }
+      .todo-block div .todo-list li .complete {
+        background-color: darkseagreen; }
+      .todo-block div .todo-list li .delete {
+        background-color: crimson; }
+  .todo-block input {
+    outline: none; }
+  .todo-block .btn {
+    color: white;
+    cursor: pointer;
+    float: right; }
+  .todo-block input[type=text] {
+    color: lightblue;
+    border: 1px solid lightgrey;
+    font-weight: bold;
+    padding: 3px; }
+
+/*# sourceMappingURL=homework.css.map */

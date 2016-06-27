@@ -1,0 +1,84 @@
+$bg0: lavender;
+$liBgColor1: lavenderblush;
+$grey0: lightgrey;
+$grey1: darkgrey;
+$btnColor0: white;
+$txtColor0: cornflowerblue;
+$liTxtColor0: lightblue;
+$dateTxtColor: sandybrown;
+$greenBtnColor: darkseagreen;
+$blueBtnColor: cornflowerblue;
+$redBtnColor: crimson;
+
+body, html {
+  margin:           0;
+  background-color: $grey0;
+  font:             normal 14px Arial;
+}
+
+.todo-block {
+  background-color: $bg0;
+  color:            $txtColor0;
+  padding:          5px 5px;
+
+  fieldset {
+    border:        5px solid white;
+    margin-bottom: 10px;
+
+    .add {
+      background-color: $greenBtnColor;
+    }
+
+    input[type=text] {
+      font-weight: bold;
+      padding:     5px;
+    }
+  }
+
+  div {
+    border-top: 4px dotted ghostwhite;
+
+    .todo-list li {
+      background-color: $liBgColor1;
+      color:            $liTxtColor0;
+      font-weight:      bold;
+      padding:          2px;
+      border-bottom:    1px dashed $bg0;
+      max-width:        95%;
+
+      input[type=text] {
+        border: 1px solid $grey0;
+      }
+
+      .change {
+        background-color: $blueBtnColor;
+      }
+
+      .complete {
+        background-color: $greenBtnColor;
+      }
+
+      .delete {
+        background-color: $redBtnColor;
+      }
+    }
+  }
+
+  input {
+    outline: none;
+  }
+
+  .btn {
+    color:  $btnColor0;
+    cursor: pointer;
+    float:  right;
+  }
+
+  input[type=text] {
+    color:       $liTxtColor0;
+    border:      1px solid $grey0;
+    font-weight: bold;
+    padding:     3px;
+  }
+
+}
