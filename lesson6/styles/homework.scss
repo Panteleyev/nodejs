@@ -25,13 +25,31 @@ body, html {
     border:        5px solid white;
     margin-bottom: 10px;
 
+    .link {
+      float:            left !important;
+      background-color: $grey0;
+      text-decoration:  none;
+    }
+
+    .link:hover, .link:focus {
+      text-decoration: underline;
+    }
+
     .add {
       background-color: $greenBtnColor;
     }
 
-    input[type=text] {
+    input[type=text], input[type=password] {
       font-weight: bold;
       padding:     5px;
+    }
+  }
+
+  .auth {
+    display: list-item;
+
+    .btn {
+      background-color: $greenBtnColor;
     }
   }
 
@@ -68,13 +86,13 @@ body, html {
     outline: none;
   }
 
-  .btn {
+  .link, .btn {
     color:  $btnColor0;
     cursor: pointer;
     float:  right;
   }
 
-  input[type=text] {
+  input[type=text], input[type=password] {
     color:       $liTxtColor0;
     border:      1px solid $grey0;
     font-weight: bold;

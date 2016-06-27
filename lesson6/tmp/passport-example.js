@@ -26,12 +26,19 @@ passport.use(new LocalStrategy(function (username, pass, done) {
   done(null, {username: username});
 }));
 
-// Метод сохранения данных пользователя в сессии
+/**
+ * Метод сохранения данных пользователя в сессии
+ *
+ * user - идентификатор для поиска в сессии
+ * возврат в done
+ */
 passport.serializeUser(function (user, done) {
   done(null, user.username);
 });
 
-// Метод извлечения данных пользователя из сессии
+/**
+ * Поиск из БД по username и возврат в done
+ */
 passport.deserializeUser(function (username, done) {
   done(null, {username: username});
 });

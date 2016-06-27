@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ToDo list</title>
+  <link rel="stylesheet" href="/styles/homework.css">
+  <script src="/resources/homework.js"></script>
+</head>
+<body>
+<div class="todo-block">
+  <form action="/login" method="post">
+    <fieldset>
+      <legend>Authenticate variant 1</legend>
+      <p>
+        <label for="login">Login:</label>
+        <input type="text" name="username" id="login" placeholder="Type login please..." />
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="Type password please..." />
+      </p>
+      <p>
+        <input type="checkbox" name="rememberme" id="rem"><label for="rem">Remember Me</label>
+      </p>
+      <a class="link" href="/">Go to main page</a>
+      <input type="submit" class="btn add" value=" Login ">
+    </fieldset>
+    <fieldset>
+      <legend>Authenticate variant 2</legend>
+      <p>
+        <a href="/auth/github">GitHub</a>
+      </p>
+    </fieldset>
+  </form>
+</div>
+</body>
+</html>

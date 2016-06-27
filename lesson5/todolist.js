@@ -1,3 +1,5 @@
+'use strict';
+
 var config         = require('./config'),
     mysql          = require('mysql'),
     connectionPool = mysql.createPool(config),

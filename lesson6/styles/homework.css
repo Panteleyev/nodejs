@@ -10,11 +10,21 @@ body, html {
   .todo-block fieldset {
     border: 5px solid white;
     margin-bottom: 10px; }
+    .todo-block fieldset .link {
+      float: left !important;
+      background-color: lightgrey;
+      text-decoration: none; }
+    .todo-block fieldset .link:hover, .todo-block fieldset .link:focus {
+      text-decoration: underline; }
     .todo-block fieldset .add {
       background-color: darkseagreen; }
-    .todo-block fieldset input[type=text] {
+    .todo-block fieldset input[type=text], .todo-block fieldset input[type=password] {
       font-weight: bold;
       padding: 5px; }
+  .todo-block .auth {
+    display: list-item; }
+    .todo-block .auth .btn {
+      background-color: darkseagreen; }
   .todo-block div {
     border-top: 4px dotted ghostwhite; }
     .todo-block div .todo-list li {
@@ -34,11 +44,11 @@ body, html {
         background-color: crimson; }
   .todo-block input {
     outline: none; }
-  .todo-block .btn {
+  .todo-block .link, .todo-block .btn {
     color: white;
     cursor: pointer;
     float: right; }
-  .todo-block input[type=text] {
+  .todo-block input[type=text], .todo-block input[type=password] {
     color: lightblue;
     border: 1px solid lightgrey;
     font-weight: bold;
