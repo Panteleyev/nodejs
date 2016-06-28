@@ -26,13 +26,7 @@ body, html {
     margin-bottom: 10px;
 
     .link {
-      float:            left !important;
-      background-color: $grey0;
-      text-decoration:  none;
-    }
-
-    .link:hover, .link:focus {
-      text-decoration: underline;
+      float: left !important;
     }
 
     .add {
@@ -90,6 +84,19 @@ body, html {
     color:  $btnColor0;
     cursor: pointer;
     float:  right;
+  }
+
+  .link {
+    background-color: $grey0;
+    text-decoration:  none;
+  }
+
+  .link:hover, .link:focus {
+    text-decoration: underline;
+  }
+
+  .float-none {
+    float: none;
   }
 
   input[type=text], input[type=password] {
