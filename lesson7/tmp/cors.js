@@ -20,8 +20,9 @@ rest.use(function (req, res, next) {
 
 // Определяем обработку предварительных запросов
 rest.opts('.*', function (req, res, next) {
-  res.header('Access-Control-Allow-Origin', req.headers.origin);
+  res.header('Access-Control-Allow-Origin', req.headers.origin/* || '*'*/);
   res.header('Access-Control-Allow-Credentials', 'true');
+  // Далее не обязательно
   res.header('Access-Control-Allow-Headers', 'Authorization, X-Requested-With, Cookie, Set-Cookie, Accept, Access-Control-Allow-Credentials, Origin, Content-Type, Request-Id , X-Api-Version, X-Request-Id');
   res.header('Access-Control-Allow-Methods', 'OPTIONS, GET, POST, PATCH, PUT, DELETE');
 

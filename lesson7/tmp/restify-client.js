@@ -7,12 +7,12 @@ var client = restify.createJsonClient({
 });
 
 // Делаем запрос
-client.get('/sale/sale_wizard_form_controller_aj/?body_type=4&firm_id=98&price=300000-1200000&provoker=firm_id',
+client.get(
+  '/sale/sale_wizard_form_controller_aj/?body_type=4&firm_id=98&price=300000-1200000&provoker=firm_id',
   function (err, req, res, obj) {
     if (err)
       throw err;
 
-    // Выводим данные,
-    // не ограничивая их по уровню вложенности
+    // Выводим данные, не ограничивая их по уровню вложенности
     console.dir(obj, {depth: null});
   });

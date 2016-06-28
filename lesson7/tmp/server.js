@@ -14,10 +14,10 @@ rest.use(restify.bodyParser());
 rest.use(restify.gzipResponse());
 
 // Дополнительная серединка для проверки аутентификации
-rest.use(function(req, res, next) {
+rest.use(function (req, res, next) {
   // Проверка на "защищенную зону"
   if (req.path().indexOf('/protected') === -1)
-    return next();
+    return next(); // переходим к следующему обработчику
 
   // Проверяем авторизацию пользователя
   var auth = req.authorization;
@@ -36,25 +36,25 @@ rest.use(function(req, res, next) {
   return next();
 });
 
-rest.get('/', function(req, res) {
+rest.get('/', function (req, res) {
   return res.send(200, {result: "OK"});
 });
 
 // Пример перенаправления
-rest.get('/redirect', function(req, res) {
+rest.get('/redirect', function (req, res) {
   res.setHeader('Location', 'http://google.ru');
   res.send(301);
 });
 
 // Защищенная зона
-rest.get('/protected/export/:format', function(req, res) {
+rest.get('/protected/export/:format', function (req, res) {
   res.send(200, {result: req.params.format});
 });
 
-rest.post('/protected/import', function(req, res) {
+rest.post('/protected/import', function (req, res) {
   res.send(200, {result: "imported!", data: req.params});
 });
 
-rest.listen(8000, function() {
+rest.listen(8000, function () {
   console.log('API launched on 8000 port');
 });

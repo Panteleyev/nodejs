@@ -40,16 +40,19 @@ rest.post('/cars', function (req, res) {
 
 // Удаляем элемент в коллекции
 rest.del('/cars/:id', function (req, res) {
-  var id  = +req.params.id;
-  var car = cars.filter(function (v) {
-    return v.id === id;
-  })[0];
+  var id     = +req.params.id;
+  var hasCar = cars.some(function (car) {
+    return car.id === id;
+  });
+  //  var car = cars.filter(function (v) {
+  //    return v.id === id;
+  //  })[0];
 
-  if (!car)
+  if (!hasCar)
     return res.send(404, 'Нет такой машины!');
 
   cars = cars.filter(function (value) {
-    return value.id !== id;
+    return +value.id !== id;
   });
 
   return res.send(200, {
@@ -73,6 +76,8 @@ rest.get('/cars/:id', function (req, res) {
 });
 
 // Изменяем информацию об элементе коллекции
+// patch - изменение части
+// put - изменяем объект на совершенно новый
 rest.put('/cars/:id', function (req, res) {
   if (!req.params.type || !req.params.brand)
     return res.send(400, 'Некорректный запрос!');
