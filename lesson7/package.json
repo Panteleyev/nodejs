@@ -1,15 +1,25 @@
 {
-  "name": "lesson7",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
+  "name":         "lesson7",
+  "version":      "1.0.0",
+  "description":  "",
+  "main":         "index.js",
+  "scripts":      {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords":     [],
+  "author":       "",
+  "license":      "ISC",
   "dependencies": {
-    "restify": "^4.1.1"
+    "body-parser":      "^1.15.2",
+    "consolidate":      "^0.14.1",
+    "cookie-parser":    "^1.4.3",
+    "cookie-session":   "^2.0.0-alpha.1",
+    "express":          "^4.14.0",
+    "handlebars":       "^4.0.5",
+    "mysql":            "^2.11.1",
+    "passport":         "^0.3.2",
+    "passport-github2": "^0.1.10",
+    "passport-local":   "^1.0.0",
+    "restify":          "^4.1.1"
   }
 }

@@ -1,0 +1,60 @@
+body, html {
+  margin: 0;
+  background-color: lightgrey;
+  font: normal 14px Arial; }
+
+.todo-block {
+  background-color: lavender;
+  color: cornflowerblue;
+  padding: 5px 5px; }
+  .todo-block fieldset {
+    border: 5px solid white;
+    margin-bottom: 10px; }
+    .todo-block fieldset .link {
+      float: left !important; }
+    .todo-block fieldset .add {
+      background-color: darkseagreen; }
+    .todo-block fieldset input[type=text], .todo-block fieldset input[type=password] {
+      font-weight: bold;
+      padding: 5px; }
+  .todo-block .auth {
+    display: list-item; }
+    .todo-block .auth .btn {
+      background-color: darkseagreen; }
+  .todo-block div {
+    border-top: 4px dotted ghostwhite; }
+    .todo-block div .todo-list li {
+      background-color: lavenderblush;
+      color: lightblue;
+      font-weight: bold;
+      padding: 2px;
+      border-bottom: 1px dashed lavender;
+      max-width: 95%; }
+      .todo-block div .todo-list li input[type=text] {
+        border: 1px solid lightgrey; }
+      .todo-block div .todo-list li .change {
+        background-color: cornflowerblue; }
+      .todo-block div .todo-list li .complete {
+        background-color: darkseagreen; }
+      .todo-block div .todo-list li .delete {
+        background-color: crimson; }
+  .todo-block input {
+    outline: none; }
+  .todo-block .link, .todo-block .btn {
+    color: white;
+    cursor: pointer;
+    float: right; }
+  .todo-block .link {
+    background-color: lightgrey;
+    text-decoration: none; }
+  .todo-block .link:hover, .todo-block .link:focus {
+    text-decoration: underline; }
+  .todo-block .float-none {
+    float: none; }
+  .todo-block input[type=text], .todo-block input[type=password] {
+    color: lightblue;
+    border: 1px solid lightgrey;
+    font-weight: bold;
+    padding: 3px; }
+
+/*# sourceMappingURL=homework.css.map */

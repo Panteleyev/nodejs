@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ToDo list</title>
+  <link rel="stylesheet" href="/styles/homework.css">
+  <script src="/resources/homework.js"></script>
+</head>
+<body>
+<div class="todo-block">
+  <form class="auth" action="/login">
+    <input type="submit" class="btn" value=" Auth ">
+  </form>
+  <h1>ToDo list</h1>
+  <div>
+    <ul class="todo-list">
+      {{#each todo_list}}
+      <li>
+        {{this.text}}
+        ({{#if_eq this.completed 'true'}}completed{{else}}no completed{{/if_eq}})
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
+</body>
+</html>

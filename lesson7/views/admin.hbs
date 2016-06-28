@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ToDo list</title>
+  <link rel="stylesheet" href="/styles/homework.css">
+  <script src="/resources/homework.js"></script>
+</head>
+<body>
+<div class="todo-block">
+  <form class="auth" action="/logout">
+    Hello, <a class="link float-none" href="/user">{{user.login}}</a>! <input type="submit" class="btn" value=" Logout ">
+  </form>
+  <h1>ToDo list</h1>
+  <div>
+    <ul class="todo-list">
+      {{#each todo_list}}
+      <li>
+        <input type="text" id="title{{this.id}}" name="title" placeholder="Type title please..." value="{{this.text}}" maxlength="255" />
+        {{#if_eq this.completed 'true'}}completed{{else}}no completed{{/if_eq}}
+        <input type="button" class="btn delete" onClick="sendQuery({{this.id}}, 'delete')" value="X" />
+        {{#if_eq this.completed 'false'}}<input type="button" class="btn complete" onClick="sendQuery({{this.id}}, 'complete')" value="Complete" />{{/if_eq}}
+        <input type="button" class="btn change" onClick="sendQuery({{this.id}}, 'change')" value="Save" />
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+  <form action="." method="post">
+    <fieldset>
+      <legend>New ToDo</legend>
+      <p>
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" placeholder="Type title please..." maxlength="255" />
+        <label for="status">Completed:</label> <input type="checkbox" name="status" id="status" />
+        <input type="hidden" name="command" value="add" />
+      </p>
+      <input type="submit" class="btn add" value=" + ">
+    </fieldset>
+  </form>
+  <form id="controlTask" action="." method="post">
+    <input type="hidden" name="id" id="id_" />
+    <input type="hidden" name="title" id="title_" />
+    <input type="hidden" name="status" id="status_" />
+    <input type="hidden" name="command" id="command_" />
+  </form>
+</div>
+</body>
+</html>
