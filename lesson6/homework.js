@@ -158,14 +158,40 @@ app.all('/user/*', isAuth);
  * Страница пользователя
  */
 app.get('/user', function (req, res) {
-  res.status(200).send('Hello, ' + req.user.username + '!');
+  res
+    .status(200)
+    .render('other', {
+      form:    '<form class="auth" action="/user/settings"><input type="submit" class="btn" value=" Settings "></form>',
+      legend:  'User page',
+      message: 'Hello, ' + req.user.login + '!'
+    });
 });
 
 /**
  * Страница настройки в стадии бесконечной разработки :)
  */
 app.get('/user/settings', function (req, res) {
-  res.status(200).send('This page is in the process of infinite development! :)');
+  res
+    .status(200)
+    .render('other', {
+      legend:  'Settings',
+      message: 'This page is in the process of infinite development! :)'
+    });
+});
+
+/**
+ * Иная страница
+ */
+app.use(function (req, res) {
+  //  res
+  //    .status(404)
+  //    .send('Error 404. Page not found.')
+  //
+  res
+    .status(404)
+    .render('404', {
+      message: 'Page not found'
+    });
 });
 
 /**
