@@ -131,9 +131,9 @@ app.use(function (req, res, next) {
   if (req.method == 'POST' && req.url == '/login') {
     if (req.body.rememberme) {
       req.sessionOptions.maxAge = 2592000000; // 30*24*60*60*1000 Rememeber 'me' for 30 days
-    } else {
+    } /*else {
       req.sessionOptions.expires = false;
-    }
+    }*/
   }
   next();
 });
