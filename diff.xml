@@ -44,7 +44,6 @@
         <PlaceSettings>
           <option name="HIGHLIGHT_POLICY" value="BY_LINE" />
           <option name="USE_SOFT_WRAPS" value="true" />
-          <option name="EXPAND_BY_DEFAULT" value="false" />
         </PlaceSettings>
       </entry>
       <entry key="Merge">
